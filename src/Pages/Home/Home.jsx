@@ -1,7 +1,8 @@
 import React from 'react';
 import Navbar from '../../Components/Navbar';
 import BannerImg from '../../Assets/Homepage/Asset2.png';
-import Aboutus from './Aboutus';
+import Aboutus from './AboutusHome';
+import ServiceHome from './ServiceHome';
 
 function Home() {
   return (
@@ -45,6 +46,7 @@ function Home() {
         </div>
       </div>
       <Aboutus/>
+      <ServiceHome/>
     </div>
   );
 }

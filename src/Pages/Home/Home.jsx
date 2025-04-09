@@ -1,8 +1,11 @@
 import React from 'react';
-import Navbar from '../../Components/Navbar';
+import Navbar from '../Components/Navbar';
 import BannerImg from '../../Assets/Homepage/Asset2.png';
 import Aboutus from './AboutusHome';
 import ServiceHome from './ServiceHome';
+import CandBHome from './CandBHome';
+import HomeProject from './HomeProject';
+import Footer from '../Components/Footer';
 
 function Home() {
   return (
@@ -47,6 +50,9 @@ function Home() {
       </div>
       <Aboutus/>
       <ServiceHome/>
+      <CandBHome/>
+      <HomeProject/>
+      <Footer/>
     </div>
   );
 }

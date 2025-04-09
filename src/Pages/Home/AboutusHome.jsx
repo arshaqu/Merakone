@@ -1,7 +1,8 @@
 import React from 'react';
 import BannerImg from '../../Assets/Homepage/BannerAbout.png';
 import Image1 from '../../Assets/Homepage/Asset3.png';
-import counter from '../../Assets/Homepage/Countown.png';
+
+
 
 function Aboutus() {
   return (

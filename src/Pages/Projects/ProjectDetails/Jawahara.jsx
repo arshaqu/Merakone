@@ -9,19 +9,17 @@ import { CiLocationOn } from "react-icons/ci"
 import { GiResize, GiShop } from "react-icons/gi"
 
 
-import Image1 from '../../../Assets/Projects/Binghatti/Bin1.jpeg'
-import Image2 from '../../../Assets/Projects/Binghatti/Bin2.jpeg'
-import Image3 from '../../../Assets/Projects/Binghatti/Bin3.jpeg'
-import Image4 from '../../../Assets/Projects/Binghatti/Bin4.jpeg'
+import Image1 from '../../../Assets/Projects/Jawahar/Jaw1.jpeg'
+import Image2 from '../../../Assets/Projects/Jawahar/Jaw2.jpg'
+import Image3 from '../../../Assets/Projects/Jawahar/Jaw3.jpeg'
+import Image4 from '../../../Assets/Projects/Jawahar/Jaw4.jpeg'
 
 import Aos from 'aos'
 
 
 
+function Jawahara() {
 
-
-function Binghatti() {
- 
     useEffect(() => {
         Aos.init({
           duration: 1000,
@@ -51,10 +49,10 @@ function Binghatti() {
                 className="text-3xl sm:text-4xl md:text-6xl font-serif font-semibold text-[#2d3680] mb-4"
                 style={{ fontFamily: 'Against Regular, serif' }}
               >
-                BINGHATTI
+                JAWHARA
               </h1>
               <p className="uppercase text-xs md:text-lg md:tracking-[7px] tracking-[4px] text-blue-500 font-bold md:mt-5 p-2 md:p-4 mb-6 montserrat">
-                Home &gt; PROJECTS &gt; BINGHATTI
+                Home &gt; PROJECTS &gt; jawhara
               </p>
             </div>
           </div>
@@ -86,7 +84,7 @@ function Binghatti() {
                 <span className="bg-white text-[#2d3680] px-4 md:px-7 py-0 rounded-md text-sm md:text-lg font-medium mb-2 md:mb-3 mt-2 md:mt-3 ">
                   Sector
                 </span>
-                <p className="text-lg md:text-2xl">BINGHATTI</p>
+                <p className="text-lg md:text-2xl">Jawhara</p>
               </div>
     
               <div className="hidden md:block h-32 w-px bg-white mx-12"></div>
@@ -120,7 +118,7 @@ function Binghatti() {
                 <div className="overflow-hidden rounded-xl group">
                   <div className="relative overflow-hidden transition-transform duration-500 ease-in-out transform group-hover:scale-105">
                     <img 
-                      src={Image2} 
+                      src={Image1} 
                       alt="Gissah showcase" 
                       className="w-full h-96 md:h-[500px] object-cover transition-all duration-500" 
                     />
@@ -134,7 +132,7 @@ function Binghatti() {
                 <div className="overflow-hidden rounded-lg group">
                   <div className="relative overflow-hidden transition-transform duration-500 ease-in-out transform group-hover:scale-105">
                     <img 
-                      src={Image1} 
+                      src={Image2} 
                       alt="Gissah interior" 
                       className="w-full h-80 object-cover transition-all duration-500" 
                     />
@@ -199,4 +197,4 @@ function Binghatti() {
     }
 
     
-export default Binghatti
+export default Jawahara

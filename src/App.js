@@ -23,6 +23,8 @@ import KikoMilano from './Pages/Projects/ProjectDetails/KikoMilano';
 import Alhussaini_Lavanda from './Pages/Projects/ProjectDetails/Alhussaini_Lavanda';
 import Brand_For_Less from './Pages/Projects/ProjectDetails/Brand_For_Less';
 import Binghatti from './Pages/Projects/ProjectDetails/Binghatti';
+import Jawahara from './Pages/Projects/ProjectDetails/Jawahara';
+import Daiso from './Pages/Projects/ProjectDetails/Daiso';
 
 function App() {
   return (
@@ -48,6 +50,10 @@ function App() {
         <Route path="/binghatti" element={<Binghatti/>} />
         <Route path="/projects_paul" element={<Paul/>} />
         <Route path="/gissah" element={<Gissah/>} />
+        <Route path="/jawhara" element={<Jawahara/>} />
+        <Route path="/daiso" element={<Daiso/>} />
+
+
 
 
 

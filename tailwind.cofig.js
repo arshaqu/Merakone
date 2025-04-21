@@ -6,6 +6,7 @@ module.exports = {
   ],
   theme: {
     extend: {
+      
       screens: {
         xs: "400px",  // Extra small screens
         sm: "640px",
@@ -13,6 +14,7 @@ module.exports = {
         lg: "1024px",
         xl: "1280px", // Ensure this is valid (Tailwind does not have `xs` by default)
       },
+      
     },
   },
   plugins: [

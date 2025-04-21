@@ -12,7 +12,12 @@ function Navbar() {
           className="flex justify-between mx-auto pt-4"
         >
           <a href="/" className="flex">
-            <img src={Logo} className="md:h-auto md:ml-[-20px] md:w-auto h-8 ml-10 " alt="Merak One Logo" />
+          <img
+  src={Logo}
+  alt="Merak One Logo"
+  className="ml-10 h-10 max-w-auto md:ml-[-20px] md:max-w-[200px] md:h-auto object-contain"
+/>
+
           </a>
           {/* Mobile Toggle Button */}
           <button

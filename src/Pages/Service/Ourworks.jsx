@@ -87,7 +87,7 @@ function Card({ data, height }) {
       <div className="absolute"></div>
       <div className="absolute bottom-6 md:left-4 p-5 text-white">
         <h3 className="text-xl font-semibold against ">{data.title}</h3>
-        <p className="text-sm mt-2 max-w-xs">{data.description}</p>
+        <p className="text-sm md:text-lg mt-2 max-w-xs">{data.description}</p>
       </div>
     </div>
   );

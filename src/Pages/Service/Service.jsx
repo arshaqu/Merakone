@@ -76,7 +76,7 @@ function Service() {
                                 <h3 className="text-white text-xl  mb-2 font-serif tracking-wide">
                                     TURNKEY FIT-OUT SOLUTIONS
                                 </h3>
-                                <p className="text-white text-sm">
+                                <p className="text-white text-sm md:text-lg montserrat">
                                     From design to execution, we handle everything to deliver fully furnished and ready-to-use interiors.
                                 </p>
                             </div>
@@ -93,7 +93,7 @@ function Service() {
                                 <h3 className="text-white text-xl font-semibold mb-2 font-serif tracking-wide against">
                                     CUSTOM FURNITURE &amp; FITTINGS PRODUCTION
                                 </h3>
-                                <p className="text-white text-sm montserrat">
+                                <p className="text-white text-sm md:text-lg montserrat">
                                     Precision-crafted furniture and fittings that blend quality with aesthetics.
                                 </p>
                             </div>
@@ -109,7 +109,7 @@ function Service() {
                                 <h3 className="text-white text-xl  mb-2 font-serif tracking-wide">
                                     OFFICE DESIGN AND BUILD
                                 </h3>
-                                <p className="text-white text-sm">
+                                <p className="text-white text-sm md:text-lg">
                                     Creating inspiring and functional workplaces that reflect your brand identify.
                                 </p>
                             </div>
@@ -126,7 +126,7 @@ function Service() {
                                 <h3 className="text-white text-xl font-semibold mb-2 font-serif tracking-wide against">
                                     POST OPENING SUPPORT
                                 </h3>
-                                <p className="text-white text-sm montserrat">
+                                <p className="text-white text-sm md:text-lg montserrat">
                                     Ongoing maintance and quick support to keep your space at its best.
                                 </p>
                             </div>

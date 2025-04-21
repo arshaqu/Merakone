@@ -110,7 +110,7 @@ function CandBHome() {
 
   return (
     <div>
-    <div className="bg-black text-white py-8 sm:py-12 md:py-16 text-center px-4 sm:px-6">
+    <div className="bg-[#474e92] text-white py-8 sm:py-12 md:py-16 text-center px-4 sm:px-6">
       <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 sm:mb-6 against">
         Our Clients & Brand
       </h2>

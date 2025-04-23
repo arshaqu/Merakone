@@ -87,7 +87,7 @@ function AlhussainiJizan() {
                 <span className="bg-white text-[#2d3680] px-4 md:px-7 py-0 rounded-md text-sm md:text-lg font-medium mb-2 md:mb-3 mt-2 md:mt-3 ">
                   Sector
                 </span>
-                <p className="text-lg md:text-2xl">Paul Le Cafe</p>
+                <p className="text-lg md:text-2xl">Al-Hussaini</p>
               </div>
     
               <div className="hidden md:block h-32 w-px bg-white mx-12"></div>
@@ -229,11 +229,11 @@ function AlhussainiJizan() {
       <div className="hidden md:block h-14 border-l border-orange-300 mx-10" />
     
       {/* Next Project */}
-      <a href="/intimissimi">
+      <a href="/veromoda">
       <div  className="text-center md:text-right">
         <p className="text-xs tracking-widest text-blue-500 hover:text-gray-900 uppercase mb-1">Next Project</p>
         <h2 className="text-xl font-serif text-black hover:text-blue-600 transition-colors duration-300 cursor-pointer">
-        INTIMISSIMI PANORAMA
+        VERO MODA
         </h2>
       </div>
       </a>

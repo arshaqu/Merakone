@@ -217,11 +217,11 @@ function Reserved() {
 
       <div className="max-w-7xl mx-auto px-6 py-12 md:py-20 flex flex-col md:flex-row items-center justify-between">
   {/* Previous Project */}
- <a href="/projects_paul">
+ <a href="/Kiko_Riyadh_Gallery">
  <div className="text-center md:text-left mb-10 md:mb-0">
     <p className="text-xs tracking-widest text-orange-500 hover:text-gray-900 uppercase mb-1">Previous Project</p>
     <h2 className="text-xl font-serif text-black hover:text-orange-500 transition-colors duration-300 cursor-pointer">
-    PAUL LE CAFE
+    KIKO RIYADH GALLERY
     </h2>
   </div>
  </a>
@@ -234,7 +234,7 @@ function Reserved() {
   <div  className="text-center md:text-right">
     <p className="text-xs tracking-widest text-blue-500 hover:text-gray-900 uppercase mb-1">Next Project</p>
     <h2 className="text-xl font-serif text-black hover:text-blue-600 transition-colors duration-300 cursor-pointer">
-    KIKO RIYADH GALLE
+    PAUL LE CAFE 
     </h2>
   </div>
   </a>

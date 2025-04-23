@@ -19,6 +19,9 @@ import Client9 from '../../Assets/Clients&Brands/Clients/Clients9.png';
 import Client10 from '../../Assets/Clients&Brands/Clients/Clients10.png';
 import Client11 from '../../Assets/Clients&Brands/Clients/Clients11.png';
 import Client12 from '../../Assets/Clients&Brands/Clients/Clients12.png';
+import Client13 from '../../Assets/Clients&Brands/Clients/Clients13.png';
+import Client14 from '../../Assets/Clients&Brands/Clients/Clients14.png';
+
 
 import Brand1 from '../../Assets/Clients&Brands/Brands/Brand1.png';
 import Brand2 from '../../Assets/Clients&Brands/Brands/Brand2.png';
@@ -38,6 +41,9 @@ import Brand15 from '../../Assets/Clients&Brands/Brands/Brand15.png';
 import Brand16 from '../../Assets/Clients&Brands/Brands/Brand16.png';
 import Brand17 from '../../Assets/Clients&Brands/Brands/Brand17.png';
 import Brand18 from '../../Assets/Clients&Brands/Brands/Brand18.png';
+import Brand19 from '../../Assets/Clients&Brands/Brands/Brand19.png';
+import Brand20 from '../../Assets/Clients&Brands/Brands/Brand20.png';
+
 
 const Clients = () => {
   useEffect(() => {
@@ -48,14 +54,15 @@ const Clients = () => {
   }, []);
 
   const clientLogos = [
-    Client1, Client2, Client3, Client4, Client5, Client6,
-    Client7, Client8, Client9, Client10, Client11, Client12,
+    Client1,   Client2,  Client3 , Client4  , Client5  , Client6,     Client7 ,
+    Client8, Client9, Client10  ,Client11  , Client12 , Client13  ,Client14
   ];
 
   const brandLogos = [
     Brand1, Brand2, Brand3, Brand4, Brand5, Brand6,
     Brand7, Brand8, Brand9, Brand10, Brand11, Brand12,
-    Brand13, Brand14, Brand15, Brand16, Brand17, Brand18
+    Brand13, Brand14, Brand15, Brand16, Brand17, Brand18 ,
+    Brand19 , Brand20
   ];
 
   return (

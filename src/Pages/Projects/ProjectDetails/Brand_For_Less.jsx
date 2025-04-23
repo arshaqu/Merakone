@@ -3,7 +3,6 @@ import Footer from '../../Components/Footer'
 import Navbar from '../../Components/Navbar'
 import { IoCheckmarkDoneCircleOutline } from "react-icons/io5"
 import PaulBg from '../../../Assets/Projects/Paul/PaulBg.jpg'
-import Bg from '../../../Assets/Projects/Paul/Bg.png'
 import LineBg from '../../../Assets/Projects/Paul/Bg.png'
 import { CiLocationOn } from "react-icons/ci"
 import { GiResize, GiShop } from "react-icons/gi"
@@ -168,11 +167,11 @@ function Brand_For_Less() {
     
           <div className="max-w-7xl mx-auto px-6 py-12 md:py-20 flex flex-col md:flex-row items-center justify-between">
             {/* Previous Project */}
-            <a href="/alhussaini_lavanda">
+            <a href="/kiko_kingdom">
               <div className="text-center md:text-left mb-10 md:mb-0">
                 <p className="text-xs tracking-widest text-orange-500 hover:text-gray-900 uppercase mb-1">Previous Project</p>
                 <h2 className="text-xl font-serif text-black hover:text-orange-500 transition-colors duration-300 cursor-pointer">
-                AL HUSSAINI LAVANDA
+               KIKO KINGDOM CENTER
                 </h2>
               </div>
             </a>
@@ -180,11 +179,11 @@ function Brand_For_Less() {
             {/* Vertical Divider */}
             <div className="hidden md:block h-14 border-l border-blue-500 mx-10" />
 
-            <a href="/binghatti">
+            <a href="/paule_le_gallery">
               <div className="text-center md:text-right">
                 <p className="text-xs tracking-widest text-blue-500 hover:text-gray-900 uppercase mb-1">Next Project</p>
                 <h2 className="text-xl font-serif text-black hover:text-blue-600 transition-colors duration-300 cursor-pointer">
-                  BINGHATTI OFFICE RIYADH
+                PAUL LE CAFE RIYADH
                 </h2>
               </div>
             </a>

@@ -169,11 +169,11 @@ function Binghatti() {
     
           <div className="max-w-7xl mx-auto px-6 py-12 md:py-20 flex flex-col md:flex-row items-center justify-between">
             {/* Previous Project */}
-            <a href="/brand_for_less">
+            <a href="/sun_glass_hut_Panorama">
               <div className="text-center md:text-left mb-10 md:mb-0">
                 <p className="text-xs tracking-widest text-orange-500 hover:text-gray-900 uppercase mb-1">Previous Project</p>
                 <h2 className="text-xl font-serif text-black hover:text-orange-500 transition-colors duration-300 cursor-pointer">
-               BRAND FOR LESS
+               SUN GLASS HUT PANORAMA
                 </h2>
               </div>
             </a>
@@ -181,7 +181,7 @@ function Binghatti() {
             {/* Vertical Divider */}
             <div className="hidden md:block h-14 border-l border-blue-500 mx-10" />
 
-            <a href="/binghatti">
+            <a href="/jawhara">
               <div className="text-center md:text-right">
                 <p className="text-xs tracking-widest text-blue-500 hover:text-gray-900 uppercase mb-1">Next Project</p>
                 <h2 className="text-xl font-serif text-black hover:text-blue-600 transition-colors duration-300 cursor-pointer">

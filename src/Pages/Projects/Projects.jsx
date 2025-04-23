@@ -19,6 +19,8 @@ import Asset17 from '../../Assets/Projects/Asset17.png'
 import Asset18 from '../../Assets/Projects/Asset18.png'
 import Asset19 from '../../Assets/Projects/Asset19.png'
 import Asset20 from '../../Assets/Projects/Asset20.png'
+import Asset21 from '../../Assets/Projects/Asset21.png'
+import Asset22 from '../../Assets/Projects/Asset22.png'
 import ProjectBg from '../../Assets/Projects/ProjectBg.jpg'
 import Bg from '../../Assets/Projects/bg.png'
 import Footer from '../Components/Footer'
@@ -33,23 +35,27 @@ const projectItems = [
     { image: Asset1, title: "RESERVED RIYADH GALLERY MALL RIYADH"    ,path:"/projects_reserved" },
     { image: Asset2, title: "PAUL @ PANORAMA MALL RIYADH"   ,path: "/projects_paul"},
     { image: Asset3, title: "AL HUSSAINI KADI MALL JIZAN"    ,path: "/al_hussaini_jizan" },
+    { image: Asset21, title: "VERO MODA" ,   path:'/veromoda' },
     { image: Asset4, title: "INTIMISSIMI PANORAMA MALL RIYADH"  ,path: "/intimissimi" },
-    { image: Asset5, title: "GISSAH PERFUME AL HASA MALL"   ,path: "/gissah"},
+    { image: Asset11, title: "DAISO JAPAN SALAM MALL, JEDDAH" ,path :'/daiso' },
     { image: Asset6, title: "KIKO MILANO"   ,path: "/kiko_milano" },
     { image: Asset7, title: "AL HUSSAINI LAVANDA PARK ABHA"    ,path:'/alhussaini_lavanda' },
-    { image: Asset8, title: "BRAND FOR LESS PARK AVENUE PARK"    ,path:'/brand_for_less' },
+    { image: Asset16, title: "SUN GLASS HUT PANORAMA MALL RIYADH",  path:'/sun_glass_hut_Panorama' },
     { image: Asset9, title: "BINGHATTI OFFICE-RIYADH"  , path:'/binghatti'},
     { image: Asset10, title: "JAWHARA JWELLERY PARK AVENUE RIYADH" ,path:'/jawhara' },
-    { image: Asset11, title: "DAISO JAPAN SALAM MALL, JEDDAH" ,path :'/daiso' },
-    { image: Asset12, title: "60 SEC AMWAJ MALL AKHOBAR" },
-    { image: Asset13, title: "KIKO LAVANDA PARK ABHA" },
-    { image: Asset14, title: "KIKO KINGDOM CENTER RIYADH" },
-    { image: Asset15, title: "SUN GLASS HUT" },
-    { image: Asset16, title: "SUNCLASS HUT PANORAMA MALL RIYADH" },
-    { image: Asset17, title: "PAUL LE CAFE RIYADH GALLERY MALL" },
-    { image: Asset18, title: "KIKO RIYADH GALLE" },
+    { image: Asset5, title: "GISSAH PERFUME AL-HASA MALL"   ,path: "/gissah"},
+    { image: Asset12, title: "60 SEC AMWAJ MALL AKHOBAR" ,path :'/60_sec' },
+    { image: Asset13, title: "KIKO LAVANDA PARK ABHA"   , path:'/kiko_lavanda' },
+    { image: Asset22, title: "GIORDANO" ,   path:'/giordano' },
+    { image: Asset15, title: "SUN GLASS HUT"  , path :'/sun_glass_hut' },
+    { image: Asset14, title: "KIKO KINGDOM CENTER RIYADH"   ,path:'/kiko_kingdom' },
+    { image: Asset8, title: "BRAND FOR LESS PARK AVENUE PARK"    ,path:'/brand_for_less' },
+    { image: Asset17, title: "PAUL LE CAFE RIYADH GALLERY MALL"  ,path:'/paule_le_gallery' },
+    { image: Asset18, title: "KIKO RIYADH GALLERY"   ,path:'/kiko_riyadh_gallery' },
     { image: Asset19, title: "OUR UPCOMING PROJECT ON WORKING" },
     { image: Asset20, title: "OUR UPCOMING PROJECT ON WORKING" },
+
+
   ];
 
   

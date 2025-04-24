@@ -43,6 +43,8 @@ import Brand17 from '../../Assets/Clients&Brands/Brands/Brand17.png';
 import Brand18 from '../../Assets/Clients&Brands/Brands/Brand18.png';
 import Brand19 from '../../Assets/Clients&Brands/Brands/Brand19.png';
 import Brand20 from '../../Assets/Clients&Brands/Brands/Brand20.png';
+import Brand21 from '../../Assets/Clients&Brands/Brands/Brand21.png';
+
 
 
 const Clients = () => {
@@ -62,7 +64,7 @@ const Clients = () => {
     Brand1, Brand2, Brand3, Brand4, Brand5, Brand6,
     Brand7, Brand8, Brand9, Brand10, Brand11, Brand12,
     Brand13, Brand14, Brand15, Brand16, Brand17, Brand18 ,
-    Brand19 , Brand20
+    Brand19 , Brand20  ,Brand21
   ];
 
   return (

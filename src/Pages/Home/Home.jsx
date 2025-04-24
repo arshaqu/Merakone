@@ -7,16 +7,26 @@ import CandBHome from './CandBHome';
 import HomeProject from './HomeProject';
 import Footer from '../Components/Footer';
 import Loader from '../Components/Loader';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Home() {
   const [loading, setLoading] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
+    AOS.init({
+      duration: 3000, // slower animation
+      once: false, // animate every time it scrolls into view
+      offset: 180, // triggers a bit earlier
+      easing: 'ease-in-out',
+    });
+
     const timeout = setTimeout(() => {
       setFadeOut(true);
       setTimeout(() => setLoading(false), 700);
     }, 1500);
+
     return () => clearTimeout(timeout);
   }, []);
 
@@ -25,9 +35,12 @@ function Home() {
       {loading && <Loader fadeOut={fadeOut} />}
       {!loading && (
         <div className="transition-opacity duration-1000">
+          {/* Navbar should always show */}
           <Navbar />
+
+          {/* Banner Section */}
           <div
-            className='h-screen flex justify-center items-center text-center'
+            className="h-screen flex justify-center items-center text-center"
             style={{
               backgroundImage: `url(${BannerImg})`,
               backgroundSize: 'cover',
@@ -35,15 +48,21 @@ function Home() {
               color: '#fff',
             }}
           >
-            <div className='md:mt-24'>
-              <h2 className='text-blue-500 montserrat text-[10px] md:text-[18px]' style={{ marginBottom: '1rem', letterSpacing: '8px' }}>
+            <div className="md:mt-24" data-aos="fade-in">
+              <h2
+                className="text-blue-500 montserrat text-[10px] md:text-[18px]"
+                style={{ marginBottom: '1rem', letterSpacing: '8px' }}
+              >
                 INTERIOR DESIGN AND ARCHITECTURE
               </h2>
-              <h1 className='against md:text-[60px] text-[30px]' style={{ marginBottom: '2rem', color: '#2d3680' }}>
-                "Crafting spaces,<br/> creating experiences."
+              <h1
+                className="against md:text-[60px] text-[30px]"
+                style={{ marginBottom: '2rem', color: '#2d3680' }}
+              >
+                "Crafting spaces,<br /> creating experiences."
               </h1>
               <button
-                className='absolute md:mt-24'
+                className="absolute md:mt-24"
                 style={{
                   marginLeft: '-8%',
                   backgroundColor: '#2d3680',
@@ -59,10 +78,25 @@ function Home() {
               </button>
             </div>
           </div>
-          <Aboutus />
-          <ServiceHome />
-          <CandBHome />
-          <HomeProject />
+
+          {/* Content Sections — scroll animations */}
+          <div data-aos="fade-up">
+            <Aboutus />
+          </div>
+
+          <div data-aos="fade-right">
+            <ServiceHome />
+          </div>
+
+          <div data-aos="fade-left">
+            <CandBHome />
+          </div>
+
+          <div data-aos="fade-up">
+            <HomeProject />
+          </div>
+
+          {/* Footer */}
           <Footer />
         </div>
       )}

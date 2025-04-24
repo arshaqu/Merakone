@@ -3,6 +3,7 @@ import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import AboutaBan from '../../Assets/Aboutus/AboutusBanner.png';
 import VisionMission from './VisionMission';
+import Loader from '../Components/Loader';
 
 const Whoweare = lazy(() => import('./Whoweare'));
 const Ourstory = lazy(() => import('./Ourstory'));
@@ -43,12 +44,12 @@ function Aboutus() {
       </div>
 
       {/* Lazy loaded components wrapped in Suspense */}
-      <Suspense fallback={<div className="text-center my-10">Loading...</div>}>
+      <Suspense fallback={<Loader />}>
         <Whoweare />
         <Ourstory />
         <WhatDriveUs />
-        </Suspense>
-        <VisionMission/>    
+      </Suspense>
+      <VisionMission />
       <Footer />
     </div>
   );

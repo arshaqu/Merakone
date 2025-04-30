@@ -60,45 +60,47 @@ function Kiko_Riyadh_Gallery() {
           </div>
     
           <div className="bg-[#2d3680] py-6 md:py-10 px-4 montserrat" data-aos="fade-up">
-            <div className="max-w-6xl mx-auto grid grid-cols-2 gap-6 md:flex md:flex-wrap md:justify-center text-white gap-y-8 md:gap-6">
-              <div className="flex flex-col items-center relative" data-aos="zoom-in">
-                <CiLocationOn className="w-12 h-12 md:w-24 md:h-20 mb-2" />
-                <span className="bg-white text-[#2d3680] px-2 md:px-3 py-1 rounded-md text-sm md:text-lg font-medium mb-2 md:mb-3 mt-2 md:mt-3">
-                  Location
-                </span>
-                <p className="text-lg md:text-2xl">Riyadh</p>
-              </div>
-    
-              <div className="hidden md:block h-32 w-px bg-white mx-12"></div>
-    
-              <div className="flex flex-col items-center relative" data-aos="zoom-in">
-                <GiResize className="w-12 h-12 md:w-24 md:h-20 mb-2" />
-                <span className="bg-white text-[#2d3680] px-4 md:px-7 py-1 rounded-md text-sm md:text-lg font-medium mb-2 md:mb-3 mt-2 md:mt-3">
-                  Size
-                </span>
-                <p className="text-lg md:text-2xl">2500 Sq,Ft</p>
-              </div>
-    
-              <div className="hidden md:block h-32 w-px bg-white mx-12"></div>
-    
-              <div className="flex flex-col items-center relative" data-aos="zoom-in">
-                <GiShop className="w-12 h-12 md:w-24 md:h-20 mb-2 " />
-                <span className="bg-white text-[#2d3680] px-4 md:px-7 py-0 rounded-md text-sm md:text-lg font-medium mb-2 md:mb-3 mt-2 md:mt-3 ">
-                  Sector
-                </span>
-                <p className="text-lg md:text-2xl">KIKO MILANO</p>
-              </div>
-    
-              <div className="hidden md:block h-32 w-px bg-white mx-12"></div>
-    
-              <div className="flex flex-col items-center relative" data-aos="zoom-in">
-                <IoCheckmarkDoneCircleOutline className="w-12 h-12 md:w-24 md:h-20 mb-2" />
-                <span className="bg-white text-[#2d3680] px-4 md:px-7 py-0 rounded-md text-sm md:text-lg font-medium mb-2 md:mb-3 mt-2 md:mt-3">
-                  Completed
-                </span>
-                <p className="text-lg md:text-2xl">2024</p>
-              </div>
-            </div>
+         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-y-8 md:gap-6 text-white text-center">
+           {/* Location */}
+           <div className="flex flex-col items-center" data-aos="zoom-in">
+             <CiLocationOn className="w-12 h-12 md:w-20 md:h-20 mb-2" />
+             <span className="bg-white text-[#2d3680] px-3 py-1 rounded-md text-sm md:text-lg font-medium mb-2 mt-2">
+               Location
+             </span>
+             <p className="text-base md:text-lg">RIYADH GALLERY MALL</p>
+           </div>
+       
+           {/* Divider */}
+           <div className="hidden md:flex h-32 w-px bg-white mx-4"></div>
+       
+           {/* Sector */}
+           <div className="flex flex-col items-center" data-aos="zoom-in">
+             <GiShop className="w-12 h-12 md:w-20 md:h-20 mb-2" />
+             <span className="bg-white text-[#2d3680] px-3 py-1 rounded-md text-sm md:text-lg font-medium mb-2 mt-2">
+               Sector
+             </span>
+             <p className="text-base md:text-xl">KIKO</p>
+           </div>
+       
+           {/* Divider */}
+           <div className="hidden md:flex h-32 w-px bg-white mx-4"></div>
+       
+           {/* Completed */}
+           <div className="flex flex-col items-center" data-aos="zoom-in">
+             <IoCheckmarkDoneCircleOutline className="w-12 h-12 md:w-20 md:h-20 mb-2" />
+             <span className="bg-white text-[#2d3680] px-3 py-1 rounded-md text-sm md:text-lg font-medium mb-2 mt-2">
+               Status
+             </span>
+             <p className="text-base md:text-xl">Completed</p>
+           </div>
+         </div>
+       
+         {/* Description */}
+         <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+           <p style={{fontWeight:'bold'}} className=" text-sm md:text-lg font-bold text-white tracking-wide leading-relaxed text-center bg-white mt-6 bg-clip-text text-transparent drop-shadow-lg against">
+           COMPLETE INTERIOR FIT-OUT INCLUDING CIVIL, INTERIOR DECORATIONS,CIVIL & ELECTRO MECHANICAL WORKS
+           </p>
+         </div>
           </div>
     
           <div

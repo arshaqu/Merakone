@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
+import Loader from '../Components/Loader';
 import ContactBg from '../../Assets/ContactUs/ContactusBan.png';
 import ContactImg from '../../Assets/ContactUs/ContactImg.png'
 
@@ -13,10 +14,19 @@ import ContactImg from '../../Assets/ContactUs/ContactImg.png'
 
 
 function ContactUs() {
-    useEffect(() => {
-      AOS.init({ duration: 1000, once: true });
-    }, []);
-  
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    // Initialize AOS
+    AOS.init({ duration: 1000, once: true });
+
+    // Set timer for loader
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
     return (
       <div>
         {/* Navbar */}
@@ -136,32 +146,38 @@ function ContactUs() {
             </div>
           </div>
         </div>
-          <h2
-            className="text-3xl font-bold text-center text-[#2d3680] mb-4 against mt-5"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            Our Presious Locaion
-          </h2>
-  
-        {/* Google Map Section */}
-        <div className="">
-          <div className="w-full flex justify-center">
-            <iframe
-              className="p-4 rounded-lg shadow-lg w-[90%] md:w-[100%] "
-              title="MerakOne Map"
-              data-aos="fade-up"
-              data-aos-delay="300"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1105209.867525749!2d46.33209296291543!3d24.508318142972414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x49b1d20f10ee8e65%3A0x9641e75971fac4fc!2sMerakone%20Interiors!5e0!3m2!1sen!2sin!4v1744112089989!5m2!1sen!2sin"
-              width="100%"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-        </div>
+        <div className="py-12 px-4 md:px-16 bg-white">
+  <div
+    className="flex flex-col md:flex-row items-start md:items-center gap-8"
+    data-aos="fade-up"
+    data-aos-delay="200"
+  >
+    {/* Heading */}
+    <div className="md:w-1/2">
+      <h2 className="text-3xl font-bold text-[#2d3680] against mb-4">
+        Our Precious Location
+      </h2>
+      <p className="text-lg text-gray-700 montserrat">
+        Visit our regional and head offices. We're always happy to meet you in person and show you our workspaces!
+      </p>
+    </div>
+
+    {/* Google Map */}
+    <div className="md:w-1/2 w-full">
+      <iframe
+        className="rounded-lg shadow-lg w-full h-[400px]"
+        title="MerakOne Map"
+        data-aos="fade-up"
+        data-aos-delay="300"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1105209.867525749!2d46.33209296291543!3d24.508318142972414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x49b1d20f10ee8e65%3A0x9641e75971fac4fc!2sMerakone%20Interiors!5e0!3m2!1sen!2sin!4v1744112089989!5m2!1sen!2sin"
+        style={{ border: 0 }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </div>
+</div>
   
         {/* Footer */}
         <Footer />

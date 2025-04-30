@@ -23,12 +23,22 @@ function Aboutus() {
         <div className='w-full md:w-1/2 md:pr-8  md:ml-[158px]'>
           <h1 className='md:ml-20 mt-12' style={{ fontSize: '4rem', fontFamily: 'Against Regular, sans-serif' }}>About Us</h1>
           <p className='md:mt-20 mt-10 md:text-xl montserrat md:ml-[70px] md:mr-[70px]' style={{ marginBottom: '1rem' }}>
-            Merakone Interiors is a premier turnkey interior fit-out and contracting company specializing in high-end commercial, retail, hospitality, and residential projects. With a strong presence in <strong className='font-bold'>Saudi Arabia and Bahrain</strong>, we provide end-to-end solutions, from conceptualization to execution, ensuring a seamless and stress-free experience for our clients.
+          At <strong>Merakone</strong>, we transform visions into reality through exceptional interior fit-out
+solutions across Saudi Arabia and Bahrain. Specializing in <strong>Luxury Retail, Retail, Food
+and Beverages, Commercial Workplaces, and Residential</strong> sectors, we deliver
+bespoke interiors that blend aesthetics, functionality, and innovation. Our
+commitment to quality and precision ensures every project reflects our clients’
+unique aspirations while meeting the highest industry standards.
           </p>
           <p className='md:text-xl montserrat md:ml-[70px] md:mr-[70px]' style={{ marginBottom: '2rem' }}>
-            Our expertise extends beyond design—we are a team of well-qualified civil, architectural, and electro-mechanical professionals committed to delivering excellence. With a fully equipped 1000 sq. meter furniture and fittings factory in Riyadh, we manufacture custom joinery, metalwork, and bespoke furniture to cater to diverse project needs.
-          </p>
-          <button className='mt-24 ml-24' style={{
+          A cornerstone of our capability is our <strong>1,000 sq. meter state-of-the-art furniture and
+          fittings factory in Riyadh.</strong> This well-equipped facility empowers us to craft custom
+joinery solutions, offering unparalleled flexibility and control to meet our clients’
+specific requirements. From intricate luxury retail displays to ergonomic commercial
+workspaces, our in-house manufacturing ensures seamless execution and timely
+delivery.          </p>
+         <a href="/about_us"> 
+         <button className='mt-24 ml-24' style={{
             backgroundColor: '#2d3680',
             color: '#fff',
             padding: '0.5rem 2rem',
@@ -39,6 +49,7 @@ function Aboutus() {
           }}>
             LEARN MORE
           </button>
+          </a>
         </div>
         <div className='w-full md:w-1/2 flex justify-center items-center mt-8 md:mt-0'>
           <img src={Image1} alt="Interior Design" style={{ width: '100%', borderRadius: '15px' }} />

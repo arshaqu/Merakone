@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -44,16 +44,32 @@ import Brand18 from '../../Assets/Clients&Brands/Brands/Brand18.png';
 import Brand19 from '../../Assets/Clients&Brands/Brands/Brand19.png';
 import Brand20 from '../../Assets/Clients&Brands/Brands/Brand20.png';
 import Brand21 from '../../Assets/Clients&Brands/Brands/Brand21.png';
+import Loader from '../Components/Loader';
 
 
 
 const Clients = () => {
+  const [loading, setLoading] = useState(true);
+
+
+
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  }, []);
+    const timer = setTimeout(() => setLoading(false), 2000);
+
+    // Only run AOS init if not loading
+    if (!loading) {
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    }
+
+    return () => clearTimeout(timer);
+  }, [loading]);
+
+  if (loading) {
+    return <Loader />;
+  }
 
   const clientLogos = [
     Client1,   Client2,  Client3 , Client4  , Client5  , Client6,     Client7 ,

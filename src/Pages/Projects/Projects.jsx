@@ -1,4 +1,12 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import Bg from '../../Assets/Projects/bg.png'
+import Footer from '../Components/Footer'
+import Navbar from '../Components/Navbar'
+import Loader from '../Components/Loader'
+import './Project.css'
+
+
 import Asset1 from '../../Assets/Projects/Asset1.png'
 import Asset2 from '../../Assets/Projects/Asset2.png'
 import Asset3 from '../../Assets/Projects/Asset3.png'
@@ -22,11 +30,6 @@ import Asset20 from '../../Assets/Projects/Asset20.png'
 import Asset21 from '../../Assets/Projects/Asset21.png'
 import Asset22 from '../../Assets/Projects/Asset22.png'
 import ProjectBg from '../../Assets/Projects/ProjectBg.jpg'
-import Bg from '../../Assets/Projects/bg.png'
-import Footer from '../Components/Footer'
-import Navbar from '../Components/Navbar'
-import './Project.css'
-import { useNavigate } from 'react-router-dom'
 
 
 
@@ -45,13 +48,13 @@ const projectItems = [
     { image: Asset10, title: "JAWHARA JWELLERY PARK AVENUE RIYADH" ,path:'/jawhara' },
     { image: Asset5, title: "GISSAH PERFUME AL-HASA MALL"   ,path: "/gissah"},
     { image: Asset12, title: "60 SEC AMWAJ MALL AKHOBAR" ,path :'/60_sec' },
-    { image: Asset13, title: "KIKO LAVANDA PARK ABHA"   , path:'/kiko_lavanda' },
+    { image: Asset18, title: "KIKO RIYADH GALLERY"   ,path:'/kiko_riyadh_gallery' },
     { image: Asset22, title: "GIORDANO" ,   path:'/giordano' },
     { image: Asset15, title: "SUN GLASS HUT"  , path :'/sun_glass_hut' },
     { image: Asset14, title: "KIKO KINGDOM CENTER RIYADH"   ,path:'/kiko_kingdom' },
-    { image: Asset8, title: "BRAND FOR LESS PARK AVENUE PARK"    ,path:'/brand_for_less' },
     { image: Asset17, title: "PAUL LE CAFE RIYADH GALLERY MALL"  ,path:'/paule_le_gallery' },
-    { image: Asset18, title: "KIKO RIYADH GALLERY"   ,path:'/kiko_riyadh_gallery' },
+    { image: Asset8, title: "BRAND FOR LESS PARK AVENUE PARK"    ,path:'/brand_for_less' },
+    { image: Asset13, title: "KIKO LAVANDA PARK ABHA"   , path:'/kiko_lavanda' },
     { image: Asset19, title: "OUR UPCOMING PROJECT ON WORKING" },
     { image: Asset20, title: "OUR UPCOMING PROJECT ON WORKING" },
 
@@ -64,21 +67,29 @@ const projectItems = [
     const navigate = useNavigate();
     const [isLoaded, setIsLoaded] = useState(false);
     const [visibleItems, setVisibleItems] = useState([]);
-    
+    const [loading, setLoading] = useState(true);
+
     useEffect(() => {
-      setTimeout(() => {
-        setIsLoaded(true);
-      }, 300);
-      
+      const loaderTimer = setTimeout(() => setLoading(false), 2000);
+      const loadedTimer = setTimeout(() => setIsLoaded(true), 300);
+  
       projectItems.forEach((_, index) => {
         setTimeout(() => {
           setVisibleItems(prev => [...prev, index]);
-        }, 150 * index + 500); // Start after banner animation with staggered delays
+        }, 150 * index + 500);
       });
+  
       window.scrollTo(0, 0);
-
+  
+      return () => {
+        clearTimeout(loaderTimer);
+        clearTimeout(loadedTimer);
+      };
     }, []);
-    
+  
+    if (loading) {
+      return <Loader />;
+    }
     
     const handleItemClick = (item) => {
       if (item.path) {

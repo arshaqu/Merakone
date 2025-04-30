@@ -16,28 +16,38 @@ function Whoweare() {
                backgroundAttachment: "fixed",
              }}
     >
-      <div  className="max-w-7xl w-full md:flex md:justify-between md:items-center">
+      <div  className="max-w-7xl w-full md:flex md:justify-between md:items-center p-6">
         {/* Left Content */}
         <div className="w-full md:w-full  md:ml-[-20px] ">
-          <h3 className="text-xl md:ml-20 font-semibold montserrat">WHO WE ARE</h3>
+          <h3 className="text-xl ml-3 md:ml-20 font-semibold montserrat">WHO WE ARE</h3>
           <h1
-            className="text-5xl md:text-[5rem] md:ml-20"
+            className="text-6xl md:text-[5rem] md:ml-20"
             style={{ fontFamily: 'Against Regular, sans-serif' }}
           >
             About
           </h1>
           <p className="mt-6 md:w-full md:mt-20 text-lg md:text-xl montserrat md:mx-[70px]">
-            Merakone Interiors is a premier turnkey interior fit-out and contracting company
-            specializing in high-end commercial, retail, hospitality, and residential projects.
-            With a strong presence in <strong className="font-bold">Saudi Arabia and Bahrain</strong>,
-            we provide end-to-end solutions, from conceptualization to execution, ensuring a seamless
-            and stress-free experience for our clients.
+          At <strong className='text-blue-800'>Merakone</strong>, we transform visions into reality through exceptional interior fit-out
+solutions across Saudi Arabia and Bahrain. Specializing in <strong>Luxury Retail, Retail, Food
+and Beverages, Commercial Workplaces, and Residential</strong> sectors, we deliver
+bespoke interiors that blend aesthetics, functionality, and innovation. Our
+commitment to quality and precision ensures every project reflects our clients’
+unique aspirations while meeting the highest industry standards.
           </p>
           <p className="mt-4 md:w-full text-lg md:text-xl montserrat md:mx-[70px]">
-            Our expertise extends beyond design—we are a team of well-qualified civil, architectural,
-            and electro-mechanical professionals committed to delivering excellence. With a fully
-            equipped 1000 sq. meter furniture and fittings factory in Riyadh, we manufacture custom
-            joinery, metalwork, and bespoke furniture to cater to diverse project needs.
+          A cornerstone of our capability is our <strong>1,000 sq. meter state-of-the-art furniture and
+          fittings factory in Riyadh</strong>. This well-equipped facility empowers us to craft custom
+joinery solutions, offering unparalleled flexibility and control to meet our clients’
+specific requirements. From intricate luxury retail displays to ergonomic commercial
+workspaces, our in-house manufacturing ensures seamless execution and timely
+delivery.
+          </p>
+          <p className="mt-4 md:w-full text-lg md:text-xl montserrat md:mx-[70px]">
+          With a client-centric approach, we pride ourselves on building lasting partnerships
+founded on trust, reliability, and excellence. Whether it’s creating vibrant food and
+beverage spaces, sophisticated residential interiors, or dynamic retail environments,
+Merakone is your trusted partner in shaping spaces that inspire.
+delivery.
           </p>
         </div>
 

@@ -1,12 +1,26 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useEffect, useState } from 'react';
 import CareerBg from '../../Assets/Careers/CareersBg.png';
 import { motion } from 'framer-motion';
+import Loader from '../Components/Loader';
 
 // Lazy loading components
 const Navbar = lazy(() => import('../Components/Navbar'));
 const Footer = lazy(() => import('../Components/Footer'));
 
 function Careers() {
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
+
+
   const fadeInUp = {
     hidden: { opacity: 0, y: 200 },
     visible: { opacity: 100, y: 1 },

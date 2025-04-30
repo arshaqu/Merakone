@@ -59,7 +59,7 @@ function Home() {
                 className="against md:text-[60px] text-[30px]"
                 style={{ marginBottom: '2rem', color: '#2d3680' }}
               >
-                "Crafting spaces,<br /> creating experiences."
+                "Where your vision meets<br/> our craftsmanship"
               </h1>
               <button
                 className="absolute md:mt-24"

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import '.././Css/Navbar.css'
 import Image1 from '../../Assets/Homepage/Project2.png';
 import Image2 from '../../Assets/Homepage/Project4.png';
 import Image3 from '../../Assets/Homepage/Project5.png';

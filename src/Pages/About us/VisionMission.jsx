@@ -80,7 +80,7 @@ spark joy and earn lasting trust.
 
       {/* About Section */}
       <div
-        className="w-full h-auto md:p-24 flex items-center justify-center px-8 md:px-20 relative"
+        className="w-full h-auto md:p-24 flex items-center justify-center px- md:px-20 relative"
         style={{
           backgroundImage: `url(${AboutBg})`,
           backgroundSize: 'cover',
@@ -92,10 +92,10 @@ spark joy and earn lasting trust.
 
         {/* Text Content */}
         <div
-          className="relative z-10 w-full text-white montserrat p-0 m-12  md:p-12"
+          className="relative z-10 w-full text-white montserrat p-0 m-9 mb-12 mt-12  md:p-12"
           data-aos="fade-up"
         >
-          <h1 className="text-2xl md:text-5xl ml-[-20px] font-semibold mb-4 against">Our Scope of Work</h1>
+          <h1 className="text-3xl md:text-5xl  font-semibold mb-4 against">Our Scope of Work</h1>
           <p className="text-md md:text-lg mt-5  md:mt-1">
           Our post-shop opening services are designed to provide comprehensive support,
           ensuring your space is ready for business and maintained to the highest standards:

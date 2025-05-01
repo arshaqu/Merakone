@@ -61,10 +61,11 @@ function Home() {
               >
                 "Where your vision meets<br/> our craftsmanship"
               </h1>
+              <div className='flex justify-center'>
               <button
                 className="absolute md:mt-24"
                 style={{
-                  marginLeft: '-8%',
+                 
                   backgroundColor: '#2d3680',
                   color: '#fff',
                   padding: '0.5rem 2rem',
@@ -76,6 +77,7 @@ function Home() {
               >
                 EXPLORE
               </button>
+              </div>
             </div>
           </div>
 

@@ -216,7 +216,7 @@ function CandBHome() {
       data-aos-delay="300"
     >
       <h1 
-        className="text-3xl md:text-6xl against font-bold text-primary font-elegant"
+        className="text-2xl md:text-6xl w-full against font-bold text-primary font-elegant"
         data-aos="fade-up"
         data-aos-delay="400"
       >

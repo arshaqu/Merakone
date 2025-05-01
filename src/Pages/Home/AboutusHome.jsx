@@ -21,7 +21,7 @@ function Aboutus() {
     }}>
       <div className='md:flex md:justify-between md:items-center w-full'>
         <div className='w-full md:w-1/2 md:pr-8  md:ml-[158px]'>
-          <h1 className='md:ml-20 mt-12' style={{ fontSize: '4rem', fontFamily: 'Against Regular, sans-serif' }}>About Us</h1>
+          <h1 className='md:ml-20 mt-12  text-4xl md:text-6xl' style={{fontFamily: 'Against Regular, sans-serif' }}>About Us</h1>
           <p className='md:mt-20 mt-10 md:text-xl montserrat md:ml-[70px] md:mr-[70px]' style={{ marginBottom: '1rem' }}>
           At <strong>Merakone</strong>, we transform visions into reality through exceptional interior fit-out
 solutions across Saudi Arabia and Bahrain. Specializing in <strong>Luxury Retail, Retail, Food

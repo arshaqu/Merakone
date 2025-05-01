@@ -4,7 +4,6 @@ import Image1 from '../../Assets/Homepage/Asset 5.png'
 import Image2 from '../../Assets/Homepage/Asset 6.png';
 import Image3 from '../../Assets/Homepage/Asset 7.png';
 import Image4 from '../../Assets/Homepage/Asset 8.png';
-import BgImage from '../../Assets/Homepage/Asset.jpeg'
 
 
 function ServiceHome() {

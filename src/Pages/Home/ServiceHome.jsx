@@ -77,7 +77,7 @@ function ServiceHome() {
   </div>
 
   {/* Card 3 */}
-  <div className="relative w-full h-auto md:p-24     object-cover 
+  <div className="relative w-full h-auto md:p-24 object-cover 
     transition 
     duration-300 
     ease-in-out 
@@ -94,7 +94,7 @@ function ServiceHome() {
 
   rounded-lg w-full h-full object-cover" 
     />
-    <p className="absolute inset-0 flex items-center justify-center text-lg mt-24 md:mt-[280px] md:text-4xl p-24 font-semibold text-white against text-center">
+    <p className="absolute inset-0 flex items-center justify-center text-md mt-24 md:mt-[280px] md:text-4xl p-24 font-semibold text-white against text-center">
       Post-Opening Support
     </p>
   </div>

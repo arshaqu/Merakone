@@ -96,7 +96,7 @@ function Card({ data, height, delay }) {
         alt={data.title}
         className="w-full h-full object-cover"
       />
-      <div className="absolute bottom-6 md:left-4 p-5 text-white bg-black bg-opacity-30 rounded-xl">
+      <div className="absolute bottom-6 w-4xl md:left-4 p-5 text-white  ">
         <h3 className="text-xl font-semibold against">{data.title}</h3>
         <p className="text-sm md:text-lg mt-2 max-w-xs">{data.description}</p>
       </div>

@@ -92,11 +92,11 @@ spark joy and earn lasting trust.
 
         {/* Text Content */}
         <div
-          className="relative z-10 max-w-full md:max-w-full text-white montserrat p-12"
+          className="relative z-10 w-full text-white montserrat p-0 m-12  md:p-12"
           data-aos="fade-up"
         >
-          <h1 className="text-4xl md:text-5xl font-semibold mb-4 against">Our Scope of Work</h1>
-          <p className="text-md md:text-lg">
+          <h1 className="text-2xl md:text-5xl ml-[-20px] font-semibold mb-4 against">Our Scope of Work</h1>
+          <p className="text-md md:text-lg mt-5  md:mt-1">
           Our post-shop opening services are designed to provide comprehensive support,
           ensuring your space is ready for business and maintained to the highest standards:
           </p>

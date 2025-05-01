@@ -31,7 +31,7 @@ function Aboutus() {
         <>
           <Navbar />
           <div
-            className='h-auto'
+            className='h-auto '
             style={{
               backgroundImage: `url(${AboutaBan})`,
               backgroundSize: 'cover',
@@ -43,8 +43,8 @@ function Aboutus() {
               color: '#fff',
             }}
           >
-            <div className='md:mt-48'>
-              <h1 className='md:text-[60px] text-[30px] against' style={{ color: '#2d3680' }}>
+            <div className='md:mt-48 mt-12'>
+              <h1 className='md:text-[60px]  text-[30px] against' style={{ color: '#2d3680' }}>
                 About Us
               </h1>
               <h2

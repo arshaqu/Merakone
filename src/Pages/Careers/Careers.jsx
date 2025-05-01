@@ -8,7 +8,6 @@ const Navbar = lazy(() => import('../Components/Navbar'));
 const Footer = lazy(() => import('../Components/Footer'));
 
 function Careers() {
-
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -20,10 +19,9 @@ function Careers() {
     return <Loader />;
   }
 
-
   const fadeInUp = {
     hidden: { opacity: 0, y: 200 },
-    visible: { opacity: 100, y: 1 },
+    visible: { opacity: 1, y: 0 },
   };
 
   const fadeIn = {
@@ -139,7 +137,9 @@ function Careers() {
             whileInView="visible"
             transition={{ delay: 0.8 }}
             viewport={{ once: true }}
-            className="border border-white/120 rounded-xl p-6 md:p-8 bg-gray-700 bg-opacity-40 backdrop-blur-sm montserrat max-w-full mx-auto mt-12"
+            whileHover={{ scale: 1.03 }}
+            transition={{ type: 'spring', stiffness: 300 }}
+            className="border border-white/120 rounded-xl p-6 md:p-8 bg-gray-700 bg-opacity-40 backdrop-blur-sm montserrat max-w-full mx-auto mt-12 cursor-pointer"
             style={{
               backgroundImage:
                 'linear-gradient(to bottom, rgba(113, 113, 113, 0.2), rgba(190, 190, 190, 0.3))',
@@ -180,7 +180,9 @@ function Careers() {
             whileInView="visible"
             transition={{ delay: 1 }}
             viewport={{ once: true }}
-            className="border border-white/120 rounded-xl p-6 md:p-8 bg-gray-700 bg-opacity-40 backdrop-blur-sm montserrat max-w-full mx-auto mt-12"
+            whileHover={{ scale: 1.03 }}
+            transition={{ type: 'spring', stiffness: 300 }}
+            className="border border-white/120 rounded-xl p-6 md:p-8 bg-gray-700 bg-opacity-40 backdrop-blur-sm montserrat max-w-full mx-auto mt-12 cursor-pointer"
             style={{
               backgroundImage:
                 'linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3))',

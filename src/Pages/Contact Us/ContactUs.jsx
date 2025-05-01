@@ -128,17 +128,26 @@ function ContactUs() {
                   />
                 </div>
                 <div data-aos="fade-left" data-aos-delay="400">
-                  <label className="block mb-2 text-lg montserrat">And I'm looking for</label>
+                  <label className="block text-lg montserrat">And I'm looking for</label>
                   <textarea
                     placeholder="Your message"
                     className="w-full border bg-[#dcdcdc] border-gray-400 p-3 rounded-md h-32 resize-none"
+                  />
+                </div>
+                <div data-aos="fade-right" data-aos-delay="300">
+                  <label className="block mb-2 text-lg montserrat">You can reach me at
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Your Email Here"
+                    className="w-full border bg-[#dcdcdc] border-gray-400 p-3 rounded-md montserrat"
                   />
                 </div>
                 <button
                   type="submit"
                   data-aos="zoom-in-up"
                   data-aos-delay="500"
-                  className="bg-[#2d3680] text-white px-6 py-3 rounded-lg hover:bg-[#1f2766] transition duration-300"
+                  className="bg-[#2d3680] text-white px-6 py-3 rounded-lg hover:bg-[#1f2766] transition duration-300 montserrat"
                 >
                   Send Message
                 </button>

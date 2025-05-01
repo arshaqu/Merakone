@@ -64,7 +64,7 @@ function Service() {
 
           {/* What We Offer */}
           <div className="relative z-10 max-w-full bg-gradient-to-b from-[#dcdcdc] to-[#e0dcdc] px-4 py-16 md:px-48">
-            <h1 className="text-5xl md:text-6xl font-serif text-[#2d3680] mb-4 text-center" style={{ fontFamily: 'Against Regular, serif' }} data-aos="fade-up">
+            <h1 className="text-4xl md:text-6xl font-serif text-[#2d3680] mb-4 text-center" style={{ fontFamily: 'Against Regular, serif' }} data-aos="fade-up">
               What We Offer
             </h1>
             <p className="text-[#2d3680] text-lg md:text-xl montserrat text-center mb-10" data-aos="fade-up" data-aos-delay="200">

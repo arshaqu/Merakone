@@ -61,7 +61,7 @@ function Aboutus() {
           </div>
 
           {/* Lazy loaded components wrapped in Suspense */}
-          <Suspense fallback={<div className="text-center my-10">Loading Sections...</div>}>
+          <Suspense fallback={<div className="text-center my-10 text-blue-700">Loading Sections...</div>}>
             <Whoweare />
             <Ourstory />
             <WhatDriveUs />

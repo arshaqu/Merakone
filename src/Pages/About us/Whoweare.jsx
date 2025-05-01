@@ -26,7 +26,7 @@ function Whoweare() {
           >
             About
           </h1>
-          <p className="mt-6 md:w-full md:mt-20 text-lg md:text-xl montserrat md:mx-[70px]">
+          <p className="mt-6 md:w-full md:mt-20 text-md md:text-xl montserrat md:mx-[70px]">
           At <strong className='text-blue-800'>Merakone</strong>, we transform visions into reality through exceptional interior fit-out
 solutions across Saudi Arabia and Bahrain. Specializing in <strong>Luxury Retail, Retail, Food
 and Beverages, Commercial Workplaces, and Residential</strong> sectors, we deliver
@@ -34,7 +34,7 @@ bespoke interiors that blend aesthetics, functionality, and innovation. Our
 commitment to quality and precision ensures every project reflects our clients’
 unique aspirations while meeting the highest industry standards.
           </p>
-          <p className="mt-4 md:w-full text-lg md:text-xl montserrat md:mx-[70px]">
+          <p className="mt-4 md:w-full text-md md:text-xl montserrat md:mx-[70px]">
           A cornerstone of our capability is our <strong>1,000 sq. meter state-of-the-art furniture and
           fittings factory in Riyadh</strong>. This well-equipped facility empowers us to craft custom
 joinery solutions, offering unparalleled flexibility and control to meet our clients’
@@ -42,7 +42,7 @@ specific requirements. From intricate luxury retail displays to ergonomic commer
 workspaces, our in-house manufacturing ensures seamless execution and timely
 delivery.
           </p>
-          <p className="mt-4 md:w-full text-lg md:text-xl montserrat md:mx-[70px]">
+          <p className="mt-4 md:w-full text-md md:text-xl montserrat md:mx-[70px]">
           With a client-centric approach, we pride ourselves on building lasting partnerships
 founded on trust, reliability, and excellence. Whether it’s creating vibrant food and
 beverage spaces, sophisticated residential interiors, or dynamic retail environments,

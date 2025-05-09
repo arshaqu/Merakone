@@ -68,7 +68,7 @@ function Home() {
           >
             <div className="md:mt-24" data-aos="fade-in">
               <h2
-                className="text-blue-500 montserrat text-[10px] md:text-[18px]"
+                className="text-blue-500 md:text-2xl montserrat text-[10px] md:text-[18px]"
                 style={{ marginBottom: '1rem', letterSpacing: '8px' }}
               >
                 INTERIOR DESIGN AND ARCHITECTURE
@@ -79,6 +79,15 @@ function Home() {
               >
                 "Where your vision meets<br /> our craftsmanship"
               </h1>
+              <h2
+                className="text-blue-500 montserrat text-[10px] md:text-[18px]"
+                style={{ marginBottom: '1rem', letterSpacing: '8px' }}
+              >
+              <p className="text-lg md:text-2xl text-blue-500">
+  KINGDOM OF SAUDI ARABIA <span className="mx-2 text-blue-500">  |  </span> BAHRAIN 
+</p>
+
+              </h2>
               <div className='flex justify-center'>
                 <button
                   className="absolute md:mt-24"

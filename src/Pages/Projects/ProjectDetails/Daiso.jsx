@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Footer from '../../Components/Footer'
 import Navbar from '../../Components/Navbar'
 import { IoCheckmarkDoneCircleOutline } from "react-icons/io5"
@@ -7,6 +7,7 @@ import Bg from '../../../Assets/Projects/Paul/Bg.png'
 import LineBg from '../../../Assets/Projects/Paul/Bg.png'
 import { CiLocationOn } from "react-icons/ci"
 import {  GiShop } from "react-icons/gi"
+import { IoClose } from "react-icons/io5"
 
 import Image1 from '../../../Assets/Projects/Daiso/Img1.jpg'
 import Image2 from '../../../Assets/Projects/Daiso/Img2.jpg'
@@ -27,6 +28,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 function Daiso() {
+  const [selectedImage, setSelectedImage] = useState(null);
 
 
     useEffect(() => {
@@ -36,13 +38,55 @@ function Daiso() {
         });
         window.scrollTo(0, 0);
       }, []);
+
+      const handleImageClick = (imageSrc) => {
+        setSelectedImage(imageSrc);
+        // Prevent scrolling when popup is open
+        document.body.style.overflow = 'hidden';
+      };
+    
+
+      const handleClosePopup = () => {
+        setSelectedImage(null);
+        // Restore scrolling
+        document.body.style.overflow = 'auto';
+      };
+    
     
       return (
         <div className="projects-container">
           <div className="relative z-50">
             <Navbar />
           </div>
-    
+
+            {/* Image Popup */}
+            {selectedImage && (
+          <div 
+            className="fixed inset-0 bg-black bg-opacity-75 z-[100] flex items-center justify-center p-4 transition-opacity duration-500 ease-in-out"
+            onClick={handleClosePopup}
+          >
+            <div className="relative max-w-6xl max-h-[90vh] w-full rounded-lg overflow-hidden bg-white shadow-lg transform transition-all duration-500 ease-in-out scale-95 hover:scale-100">
+              {/* Close Button with Hover Effect */}
+              <button
+                className="absolute top-4 right-4 text-white bg-black bg-opacity-50 rounded-full p-3 hover:bg-opacity-80 transition-all"
+                onClick={handleClosePopup}
+              >
+                <IoClose className="w-6 h-6" />
+              </button>
+
+              {/* Image with Subtle Zoom Effect */}
+              <img 
+                src={selectedImage} 
+                alt="Enlarged view" 
+                className="max-h-[90vh] mx-auto object-contain rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-105"
+                onClick={(e) => e.stopPropagation()} // Prevent closing when clicking on the image itself
+              />
+            </div>
+          </div>
+        )}
+
+
+
           <div
             className="w-full h-[300px] md:h-[500px] flex flex-col items-center justify-center text-center relative banner-section"
             style={{
@@ -141,7 +185,7 @@ function Daiso() {
         data-aos="zoom-in-up"
         data-aos-delay="300"
       >
-    <div className="relative md:w-[700px] w-auto rounded-3xl group overflow-hidden rounded-5xl transition-transform duration-700 ease-in-out hover:scale-[1.02] hover:rotate-[1.0deg] hover:shadow-[0_10px_30px_rgba(0,0,0,0.80)] bg-transparent">
+    <div onClick={() => handleImageClick(Image4)} className="relative md:w-[700px] w-auto rounded-3xl group overflow-hidden rounded-5xl transition-transform duration-700 ease-in-out hover:scale-[1.02] hover:rotate-[1.0deg] hover:shadow-[0_10px_30px_rgba(0,0,0,0.80)] bg-transparent">
       {/* Black overlay with opacity 20% */}
       <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-700 z-10 pointer-events-none"></div>
       
@@ -160,21 +204,21 @@ function Daiso() {
       {/* First row of images */}
       <div className="p-8 max-w-7xl mx-auto" data-aos="fade-up">
         <div className="flex flex-col md:flex-row gap-4">
-          <div className="flex-1 overflow-hidden rounded-lg group" data-aos="zoom-in-up">
+          <div onClick={() => handleImageClick(Image1)} className="flex-1 overflow-hidden rounded-lg group" data-aos="zoom-in-up">
             <div className="relative overflow-hidden transition-transform duration-300 ease-in-out transform group-hover:scale-105">
               <img src={Image1} alt="Mall cafe seating area" className="w-full h-80 object-cover transition-all duration-300" />
               <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
             </div>
           </div>
           
-          <div className="flex-1 overflow-hidden rounded-lg group" data-aos="zoom-in-up">
+          <div onClick={() => handleImageClick(Image2)} className="flex-1 overflow-hidden rounded-lg group" data-aos="zoom-in-up">
             <div className="relative overflow-hidden transition-transform duration-300 ease-in-out transform group-hover:scale-105">
               <img src={Image2} alt="Close-up seating" className="w-full h-80 object-cover transition-all duration-300" />
               <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
             </div>
           </div>
           
-          <div className="flex-1 overflow-hidden rounded-lg group" data-aos="zoom-in-up">
+          <div onClick={() => handleImageClick(Image3)} className="flex-1 overflow-hidden rounded-lg group" data-aos="zoom-in-up">
             <div className="relative overflow-hidden transition-transform duration-300 ease-in-out transform group-hover:scale-105">
               <img src={Image3} alt="Paul cafe seating" className="w-full h-80 object-cover transition-all duration-300" />
               <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
@@ -183,7 +227,7 @@ function Daiso() {
         </div>
         
         {/* Panoramic image */}
-        <div className="mt-4 overflow-hidden rounded-lg group" data-aos="zoom-in-up">
+        <div onClick={() => handleImageClick(Image4)} className="mt-4 overflow-hidden rounded-lg group" data-aos="zoom-in-up">
           <div className="relative overflow-hidden transition-transform duration-300 ease-in-out transform group-hover:scale-105">
             <img src={Image4} alt="Panoramic view" className="w-full h-80 sm:h-96 object-cover transition-all duration-300" />
             <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
@@ -194,21 +238,21 @@ function Daiso() {
       {/* Second row of images */}
       <div className="max-w-7xl md:mt-[-12px] mx-auto pb-8" data-aos="fade-up">
         <div className="flex flex-col md:flex-row gap-4 px-8">
-          <div className="flex-1 overflow-hidden rounded-lg group" data-aos="zoom-in-up">
+          <div onClick={() => handleImageClick(Image5)} className="flex-1 overflow-hidden rounded-lg group" data-aos="zoom-in-up">
             <div className="relative overflow-hidden transition-transform duration-300 ease-in-out transform group-hover:scale-105">
               <img src={Image5} alt="Mall cafe seating area" className="w-full h-80 object-cover transition-all duration-300" />
               <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
             </div>
           </div>
           
-          <div className="flex-1 overflow-hidden rounded-lg group" data-aos="zoom-in-up">
+          <div onClick={() => handleImageClick(Image7)} className="flex-1 overflow-hidden rounded-lg group" data-aos="zoom-in-up">
             <div className="relative overflow-hidden transition-transform duration-300 ease-in-out transform group-hover:scale-105">
               <img src={Image7} alt="Close-up seating" className="w-full h-80 object-cover transition-all duration-300" />
               <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
             </div>
           </div>
           
-          <div className="flex-1 overflow-hidden rounded-lg group" data-aos="zoom-in-up">
+          <div onClick={() => handleImageClick(Image6)} className="flex-1 overflow-hidden rounded-lg group" data-aos="zoom-in-up">
             <div className="relative overflow-hidden transition-transform duration-300 ease-in-out transform group-hover:scale-105">
               <img src={Image6} alt="Paul cafe seating" className="w-full h-80 object-cover transition-all duration-300" />
               <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
@@ -219,21 +263,21 @@ function Daiso() {
 
       <div className="max-w-7xl md:mt-[-12px] mx-auto pb-8" data-aos="fade-up">
         <div className="flex flex-col md:flex-row gap-4 px-8">
-          <div className="flex-1 overflow-hidden rounded-lg group" data-aos="zoom-in-up">
+          <div onClick={() => handleImageClick(Image8)} className="flex-1 overflow-hidden rounded-lg group" data-aos="zoom-in-up">
             <div className="relative overflow-hidden transition-transform duration-300 ease-in-out transform group-hover:scale-105">
               <img src={Image8} alt="Mall cafe seating area" className="w-full h-80 object-cover transition-all duration-300" />
               <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
             </div>
           </div>
           
-          <div className="flex-1 overflow-hidden rounded-lg group" data-aos="zoom-in-up">
+          <div onClick={() => handleImageClick(Image9)} className="flex-1 overflow-hidden rounded-lg group" data-aos="zoom-in-up">
             <div className="relative overflow-hidden transition-transform duration-300 ease-in-out transform group-hover:scale-105">
               <img src={Image9} alt="Close-up seating" className="w-full h-80 object-cover transition-all duration-300" />
               <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
             </div>
           </div>
           
-          <div className="flex-1 overflow-hidden rounded-lg group" data-aos="zoom-in-up">
+          <div onClick={() => handleImageClick(Image10)} className="flex-1 overflow-hidden rounded-lg group" data-aos="zoom-in-up">
             <div className="relative overflow-hidden transition-transform duration-300 ease-in-out transform group-hover:scale-105">
               <img src={Image10} alt="Paul cafe seating" className="w-full h-80 object-cover transition-all duration-300" />
               <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>

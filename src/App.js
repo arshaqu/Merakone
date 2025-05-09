@@ -35,6 +35,7 @@ import Paul from './Pages/Projects/ProjectDetails/Paul';
 import ContactUs from './Pages/Contact Us/ContactUs';
 import Projects from './Pages/Projects/Projects';
 import Careers from './Pages/Careers/Careers';
+import WhatsappButton from './Pages/Components/WhatsappButton';
 
 const Loader = () => {
   return (
@@ -56,6 +57,7 @@ function App() {
   
   return (
     <Router>
+       <WhatsappButton />  
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/careers" element={<Careers/>} />

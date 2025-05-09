@@ -1,11 +1,12 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Footer from '../../Components/Footer'
 import Navbar from '../../Components/Navbar'
 import { IoCheckmarkDoneCircleOutline } from "react-icons/io5"
 import PaulBg from '../../../Assets/Projects/Paul/PaulBg.jpg'
 import LineBg from '../../../Assets/Projects/Paul/Bg.png'
 import { CiLocationOn } from "react-icons/ci"
-import { GiResize, GiShop } from "react-icons/gi"
+import {  GiShop } from "react-icons/gi"
+import { IoClose } from "react-icons/io5"
 
 // Import only the 4 images we have
 import Image1 from '../../../Assets/Projects/Sun_Glass_Hut_Panorama/Img1.JPG'
@@ -16,6 +17,25 @@ import Image4 from '../../../Assets/Projects/Sun_Glass_Hut_Panorama//Img4.JPG'
 import Aos from 'aos'
 
 function SunGlassHut() {
+    const [selectedImage, setSelectedImage] = useState(null);
+
+
+    
+    const handleImageClick = (imageSrc) => {
+      setSelectedImage(imageSrc);
+      // Prevent scrolling when popup is open
+      document.body.style.overflow = 'hidden';
+    };
+  
+
+    const handleClosePopup = () => {
+      setSelectedImage(null);
+      // Restore scrolling
+      document.body.style.overflow = 'auto';
+    };
+
+
+
     useEffect(() => {
         Aos.init({
           duration: 1000,
@@ -24,12 +44,41 @@ function SunGlassHut() {
         window.scrollTo(0, 0);
       }, []);
     
+
+
       return (
         <div className="projects-container">
           <div className="relative z-50">
             <Navbar />
           </div>
     
+      {selectedImage && (
+              <div 
+                className="fixed inset-0 bg-black bg-opacity-75 z-[100] flex items-center justify-center p-4 transition-opacity duration-500 ease-in-out"
+                onClick={handleClosePopup}
+              >
+                <div className="relative max-w-6xl max-h-[90vh] w-full rounded-lg overflow-hidden bg-white shadow-lg transform transition-all duration-500 ease-in-out scale-95 hover:scale-100">
+                  {/* Close Button with Hover Effect */}
+                  <button
+                    className="absolute top-4 right-4 text-white bg-black bg-opacity-50 rounded-full p-3 hover:bg-opacity-80 transition-all"
+                    onClick={handleClosePopup}
+                  >
+                    <IoClose className="w-6 h-6" />
+                  </button>
+    
+                  {/* Image with Subtle Zoom Effect */}
+                  <img 
+                    src={selectedImage} 
+                    alt="Enlarged view" 
+                    className="max-h-[90vh] mx-auto object-contain rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-105"
+                    onClick={(e) => e.stopPropagation()} // Prevent closing when clicking on the image itself
+                  />
+                </div>
+              </div>
+            )}
+    
+
+
           <div
             className="w-full h-[300px] md:h-[500px] flex flex-col items-center justify-center text-center relative banner-section"
             style={{
@@ -113,7 +162,7 @@ function SunGlassHut() {
             <div className="max-w-7xl mx-auto px-6 relative z-10">
               {/* Featured large image */}
               <div className="mb-12" data-aos="fade-up">
-                <div className="overflow-hidden rounded-xl group">
+                <div onClick={() => handleImageClick(Image3)} className="overflow-hidden rounded-xl group">
                   <div className="relative overflow-hidden transition-transform duration-500 ease-in-out transform group-hover:scale-105">
                     <img 
                       src={Image3} 
@@ -127,7 +176,7 @@ function SunGlassHut() {
               
               {/* Three image layout */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="200">
-                <div className="overflow-hidden rounded-lg group">
+                <div onClick={() => handleImageClick(Image1)} className="overflow-hidden rounded-lg group">
                   <div className="relative overflow-hidden transition-transform duration-500 ease-in-out transform group-hover:scale-105">
                     <img 
                       src={Image1} 
@@ -138,7 +187,7 @@ function SunGlassHut() {
                   </div>
                 </div>
                 
-                <div className="overflow-hidden rounded-lg group">
+                <div onClick={() => handleImageClick(Image3)} className="overflow-hidden rounded-lg group">
                   <div className="relative overflow-hidden transition-transform duration-500 ease-in-out transform group-hover:scale-105">
                     <img 
                       src={Image2} 
@@ -149,7 +198,7 @@ function SunGlassHut() {
                   </div>
                 </div>
                 
-                <div className="overflow-hidden rounded-lg group">
+                <div onClick={() => handleImageClick(Image4)} className="overflow-hidden rounded-lg group">
                   <div className="relative overflow-hidden transition-transform duration-500 ease-in-out transform group-hover:scale-105">
                     <img 
                       src={Image4} 

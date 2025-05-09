@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Footer from '../../Components/Footer'
 import Navbar from '../../Components/Navbar'
 import { IoCheckmarkDoneCircleOutline } from "react-icons/io5"
@@ -7,6 +7,7 @@ import Bg from '../../../Assets/Projects/Paul/Bg.png'
 import LineBg from '../../../Assets/Projects/Paul/Bg.png'
 import { CiLocationOn } from "react-icons/ci"
 import { GiResize, GiShop } from "react-icons/gi"
+import { IoClose } from "react-icons/io5"
 
 import Image2 from '../../../Assets/Projects/Paul/Asset 2.png'
 import Image4 from '../../../Assets/Projects/Paul/Asset 3.png'
@@ -18,6 +19,8 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 function Paul() {
+  const [selectedImage, setSelectedImage] = useState(null);
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -26,11 +29,51 @@ function Paul() {
     window.scrollTo(0, 0);
   }, []);
 
+  // Handler to open the image popup
+  const handleImageClick = (imageSrc) => {
+    setSelectedImage(imageSrc);
+    // Prevent scrolling when popup is open
+    document.body.style.overflow = 'hidden';
+  };
+
+  // Handler to close the image popup
+  const handleClosePopup = () => {
+    setSelectedImage(null);
+    // Restore scrolling
+    document.body.style.overflow = 'auto';
+  };
+
   return (
     <div className="projects-container">
       <div className="relative z-50">
         <Navbar />
       </div>
+
+       
+      {selectedImage && (
+            <div 
+              className="fixed inset-0 bg-black bg-opacity-75 z-[100] flex items-center justify-center p-4 transition-opacity duration-500 ease-in-out"
+              onClick={handleClosePopup}
+            >
+              <div className="relative max-w-6xl max-h-[90vh] w-full rounded-lg overflow-hidden bg-white shadow-lg transform transition-all duration-500 ease-in-out scale-95 hover:scale-100">
+                {/* Close Button with Hover Effect */}
+                <button
+                  className="absolute top-4 right-4 text-white bg-black bg-opacity-50 rounded-full p-3 hover:bg-opacity-80 transition-all"
+                  onClick={handleClosePopup}
+                >
+                  <IoClose className="w-6 h-6" />
+                </button>
+        
+                {/* Image with Subtle Zoom Effect */}
+                <img 
+                  src={selectedImage} 
+                  alt="Enlarged view" 
+                  className="max-h-[90vh] mx-auto object-contain rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-105"
+                  onClick={(e) => e.stopPropagation()} // Prevent closing when clicking on the image itself
+                />
+              </div>
+            </div>
+          )}
 
       <div
         className="w-full h-[300px] md:h-[500px] flex flex-col items-center justify-center text-center relative banner-section"
@@ -50,12 +93,12 @@ function Paul() {
             PAUL LE CAFE
           </h1>
           <p className="uppercase text-xs md:text-lg md:tracking-[7px] tracking-[4px] text-blue-500 font-bold md:mt-5 p-2 md:p-4 mb-6 montserrat">
-                Home &gt; PROJECTS &gt; PAUL LE CAFE
-              </p>
+            <a href="/">Home</a> &gt; <a href="/projects">PROJECTS</a> &gt; PAUL LE CAFE
+          </p>
         </div>
       </div>
 
-         <div className="bg-[#2d3680] py-6 md:py-10 px-4 montserrat" data-aos="fade-up">
+      <div className="bg-[#2d3680] py-6 md:py-10 px-4 montserrat" data-aos="fade-up">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-y-8 md:gap-6 text-white text-center">
           {/* Location */}
           <div className="flex flex-col items-center" data-aos="zoom-in">
@@ -119,100 +162,104 @@ function Paul() {
           backgroundSize: '100% 100%',
         }}
       >
+        {/* Dark Blue Rounded Block */}
+        <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-96 h-[496px] bg-blue-900 rounded-xl- z-0"></div>
 
+        <div
+          className="relative z-10 max-w-6xl mx-auto px-4 md:mt-28 mt-12 md:mb-28"
+          data-aos="zoom-in-up"
+          data-aos-delay="300"
+        >
+          {/* Glassmorphism Layer */}
+          <div className="absolute shadow-inner border border-white/100 z-0" />
 
+          {/* Image with Hover Effect */}
+          <div 
+            className="relative group overflow-hidden rounded-3xl transition-transform duration-700 ease-in-out hover:scale-[1.02] hover:rotate-[1.0deg] hover:shadow-[0_12px_50px_rgba(0,0,0,0.80)] cursor-pointer"
+            onClick={() => handleImageClick(Image2)}
+          >
+            {/* Light reflection effect */}
+            <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-60 transition-opacity duration-700 z-10" />
 
+            <img
+              src={Image2}
+              alt="Cafe counter with modern design"
+              className="w-full h-auto rounded-3xl relative"
+            />
+          </div>
+        </div>
 
-  {/* Background patterns - subtle circular patterns */}
- 
-
-  {/* Dark Blue Rounded Block */}
-  <div className="absolute right-0 top-1/2  transform -translate-y-1/2 w-96 h-[496px] bg-blue-900 rounded-xl- z-0"></div>
-
-
-  <div
-  className="relative z-10 max-w-6xl mx-auto px-4 md:mt-28 mt-12 md:mb-28"
-  data-aos="zoom-in-up"
-  data-aos-delay="300"
->
-  {/* Glassmorphism Layer */}
-  <div className="absolute  shadow-inner border border-white/100 z-0" />
-
-  {/* Image with Hover Effect */}
-  <div className="relative group overflow-hidden rounded-3xl transition-transform duration-700 ease-in-out hover:scale-[1.02] hover:rotate-[1.0deg] hover:shadow-[0_12px_50px_rgba(0,0,0,0.80)]">
-    {/* Light reflection effect */}
-    <div className="absolute inset-0  pointer-events-none opacity-0 group-hover:opacity-60 transition-opacity duration-700 z-10" />
-
-    <img
-      src={Image2}
-      alt="Cafe counter with modern design"
-      className="w-full h-auto rounded-3xl relative  "
-    />
-  </div>
-</div>
-
-
-  <div className="absolute left-0 top-1/2  mt-12 w-96 h-[496px] bg-blue-900 rounded-xl- z-0"></div>
-
+        <div className="absolute left-0 top-1/2 mt-12 w-96 h-[496px] bg-blue-900 rounded-xl- z-0"></div>
 
         <div className="p-8 max-w-7xl mx-auto" data-aos="fade-up">
-  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-    <div className="col-span-1 mb-4 sm:mb-0 overflow-hidden rounded-lg group" data-aos="zoom-in-up">
-      <div className="relative overflow-hidden transition-transform duration-300 ease-in-out transform group-hover:scale-105">
-        <img src={Image5} alt="Mall cafe seating area" className="w-full h-80 object-cover transition-all duration-300" />
-        <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div 
+              className="col-span-1 mb-4 sm:mb-0 overflow-hidden rounded-lg group cursor-pointer" 
+              data-aos="zoom-in-up"
+              onClick={() => handleImageClick(Image5)}
+            >
+              <div className="relative overflow-hidden transition-transform duration-300 ease-in-out transform group-hover:scale-105">
+                <img src={Image5} alt="Mall cafe seating area" className="w-full h-80 object-cover transition-all duration-300" />
+                <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+              </div>
+            </div>
+            <div 
+              className="col-span-1 mb-4 sm:mb-0 overflow-hidden rounded-lg group cursor-pointer" 
+              data-aos="zoom-in-up"
+              onClick={() => handleImageClick(Image1)}
+            >
+              <div className="relative overflow-hidden transition-transform duration-300 ease-in-out transform group-hover:scale-105">
+                <img src={Image1} alt="Paul cafe seating" className="w-full h-80 object-cover transition-all duration-300" />
+                <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+              </div>
+            </div>
+            <div 
+              className="col-span-1 sm:row-span-2 mb-4 sm:mb-0 overflow-hidden rounded-lg group cursor-pointer" 
+              data-aos="zoom-in-up"
+              onClick={() => handleImageClick(Image4)}
+            >
+              <div className="relative overflow-hidden transition-transform duration-300 ease-in-out transform group-hover:scale-105">
+                <img src={Image4} alt="Close-up seating" className="w-full h-full sm:h-full object-cover transition-all duration-300" />
+                <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+              </div>
+            </div>
+            <div 
+              className="col-span-1 sm:col-span-2 overflow-hidden rounded-lg group cursor-pointer" 
+              data-aos="zoom-in-up"
+              onClick={() => handleImageClick(Image3)}
+            >
+              <div className="relative overflow-hidden transition-transform duration-300 ease-in-out transform group-hover:scale-105">
+                <img src={Image3} alt="Panoramic view" className="w-full h-80 sm:h-96 object-cover transition-all duration-300" />
+                <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+              </div>
+            </div>
+          </div>
+        </div>  
       </div>
-    </div>
-    <div className="col-span-1 mb-4 sm:mb-0 overflow-hidden rounded-lg group" data-aos="zoom-in-up">
-      <div className="relative overflow-hidden transition-transform duration-300 ease-in-out transform group-hover:scale-105">
-        <img src={Image1} alt="Paul cafe seating" className="w-full h-80 object-cover transition-all duration-300" />
-        <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-      </div>
-    </div>
-    <div className="col-span-1 sm:row-span-2 mb-4 sm:mb-0 overflow-hidden rounded-lg group" data-aos="zoom-in-up">
-      <div className="relative overflow-hidden transition-transform duration-300 ease-in-out transform group-hover:scale-105">
-        <img src={Image4} alt="Close-up seating" className="w-full h-full sm:h-full object-cover transition-all duration-300" />
-        <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-      </div>
-    </div>
-    <div className="col-span-1 sm:col-span-2  overflow-hidden rounded-lg group" data-aos="zoom-in-up">
-      <div className="relative overflow-hidden transition-transform duration-300 ease-in-out transform group-hover:scale-105">
-        <img src={Image3} alt="Panoramic view" className="w-full h-80 sm:h-96 object-cover transition-all duration-300" />
-        <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-      </div>
-    </div>
-  </div>
-</div>
 
-
-        
-      </div>
-
-
-      
       <div className="max-w-7xl mx-auto px-6 py-12 md:py-20 flex flex-col md:flex-row items-center justify-between">
-  {/* Previous Project */}
- <a href="/projects_reserved">
- <div className="text-center md:text-left mb-10 md:mb-0">
-    <p className="text-xs tracking-widest text-orange-500 uppercase mb-1">Previous Project</p>
-    <h2 className="text-xl font-serif text-black hover:text-orange-500 transition-colors duration-300 cursor-pointer">
-      RESERVED GALLERY MALL
-    </h2>
-  </div>
- </a>
-  {/* Vertical Divider */}
-  <div className="hidden md:block h-14 border-l border-orange-300 mx-10" />
+        {/* Previous Project */}
+        <a href="/projects_reserved">
+          <div className="text-center md:text-left mb-10 md:mb-0">
+            <p className="text-xs tracking-widest text-orange-500 uppercase mb-1">Previous Project</p>
+            <h2 className="text-xl font-serif text-black hover:text-orange-500 transition-colors duration-300 cursor-pointer">
+              RESERVED GALLERY MALL
+            </h2>
+          </div>
+        </a>
+        {/* Vertical Divider */}
+        <div className="hidden md:block h-14 border-l border-orange-300 mx-10" />
 
-  {/* Next Project */}
-  <a href="/al_hussaini_jizan">
-  <div  className="text-center md:text-right">
-    <p className="text-xs tracking-widest text-blue-500 uppercase mb-1">Next Project</p>
-    <h2 className="text-xl font-serif text-black hover:text-blue-600 transition-colors duration-300 cursor-pointer">
-    AL-HUSSAINI DADI MALL
-    </h2>
-  </div>
-  </a>
-</div>
+        {/* Next Project */}
+        <a href="/al_hussaini_jizan">
+          <div className="text-center md:text-right">
+            <p className="text-xs tracking-widest text-blue-500 uppercase mb-1">Next Project</p>
+            <h2 className="text-xl font-serif text-black hover:text-blue-600 transition-colors duration-300 cursor-pointer">
+              AL-HUSSAINI KADI MALL
+            </h2>
+          </div>
+        </a>
+      </div>
 
       <div className='h-2 w-full bg-blue-900'></div>
 

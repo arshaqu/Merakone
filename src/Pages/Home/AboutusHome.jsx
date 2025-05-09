@@ -6,7 +6,7 @@ import Image1 from '../../Assets/Homepage/Asset3.png';
 
 function Aboutus() {
   return (
-    <div className='md:h-screen h-auto' style={{
+    <div className='min-h-screen' style={{
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
@@ -20,17 +20,17 @@ function Aboutus() {
       position: 'relative', // Add relative positioning
     }}>
       <div className='md:flex md:justify-between md:items-center w-full'>
-        <div className='w-full md:w-1/2 md:pr-8  md:ml-[158px]'>
-          <h1 className='md:ml-20 mt-12  text-5xl md:text-6xl' style={{fontFamily: 'Against Regular, sans-serif' }}>About Us</h1>
-          <p className='md:mt-20 mt-10 md:text-xl  montserrat md:ml-[70px] md:mr-[70px]' style={{ marginBottom: '1rem' }}>
-          At <strong>Merakone</strong>, we transform visions into reality through exceptional interior fit-out
+        <div className='w-full md:w-2/3 md:pr-8  md:ml-[158px]'>
+          <h1 className='md:ml-20 mt-12  text-5xl md:text-7xl' style={{fontFamily: 'Against Regular, sans-serif' }}>About Us</h1>
+          <p className='md:mt-20 mt-10 md:text-2xl  montserrat md:ml-[70px] md:mr-[70px]' style={{ marginBottom: '1rem' }}>
+          At <strong>MerakOne</strong>, we transform visions into reality through exceptional interior fit-out
           solutions across Saudi Arabia and Bahrain. Specializing in <strong>Luxury Retail, Retail, Food
           and Beverages, Commercial Workplaces, and Residential</strong> sectors, we deliver
           bespoke interiors that blend aesthetics, functionality, and innovation. Our
           commitment to quality and precision ensures every project reflects our clients’
           unique aspirations while meeting the highest industry standards.
           </p>
-          <p className='md:text-xl  montserrat md:ml-[70px] md:mr-[70px]' style={{ marginBottom: '2rem' }}>
+          <p className='md:text-2xl  montserrat md:ml-[70px] md:mr-[70px]' style={{ marginBottom: '2rem' }}>
           A cornerstone of our capability is our <strong>1,000 sq. meter state-of-the-art furniture and
           fittings factory in Riyadh.</strong> This well-equipped facility empowers us to craft custom
           joinery solutions, offering unparalleled flexibility and control to meet our clients’
@@ -38,14 +38,14 @@ function Aboutus() {
           workspaces, our in-house manufacturing ensures seamless execution and timely
           delivery.          </p>
          <a href="/about_us"> 
-         <button className='mt-24 ml-24' style={{
+         <button className='mt-24 ml-24 mb-5' style={{
             backgroundColor: '#2d3680',
             color: '#fff',
             padding: '0.5rem 2rem',
             border: 'none',
             borderRadius: '25px',
             cursor: 'pointer',
-            fontSize: '1rem',
+            fontSize: '1.2rem',
           }}>
             LEARN MORE
           </button>
@@ -63,9 +63,12 @@ function Aboutus() {
           
           <div className="w-full md:w-[1px] bg-white h-10 hidden md:block"></div>
   
-          <div className="flex flex-col items-center md:flex-row md:text-left md:space-x-3 m-2">
-            <h2 className="text-3xl md:text-5xl font-bold">07</h2>
-            <p className="text-md md:text-lg text-center md:text-left">Talented<br /> managers</p>
+          <div className="flex flex-col items-center text-[#FFB22C] md:flex-row md:text-left md:space-x-3 m-2">
+            <h2 className="text-3xl md:text-5xl font-bold">Saudi Arabia</h2>
+          <div className="w-full md:w-[1px] bg-white h-10 hidden md:block"></div>
+            
+            <h2 className="text-3xl md:text-5xl font-bold">Bahrain</h2>
+
           </div>
   
           <div className="w-full md:w-[1px] bg-white h-10 hidden md:block"></div>

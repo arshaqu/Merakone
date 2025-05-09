@@ -136,13 +136,13 @@ function CandBHome() {
       <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 sm:mb-6 against">
         Our Clients & Brand
       </h2>
-      <p className="text-base sm:text-lg max-w-8xl mx-auto mb-8 sm:mb-12 text-gray-400">
+      <p className="text-base text-lg md:text-2xl max-w-8xl mx-auto mb-8 sm:mb-12 text-gray-400">
         We take pride in collaborating with top brands and valued clients who trust us for quality and innovation. Our partnerships span across various industries, reflecting our commitment to excellence and customer satisfaction.
       </p>
 
       {/* Clients Section */}
       <div className="mb-8 sm:mb-12 md:mb-16">
-        <div className="h-28 sm:h-32 md:h-32 flex justify-center items-center overflow-hidden">
+        <div className="h-28 sm:h-32 md:h-auto flex justify-center items-center overflow-hidden">
           <AnimatePresence mode="wait">
             <motion.div 
               key={`client-container-${clientKey}`}
@@ -150,11 +150,11 @@ function CandBHome() {
               initial="enter"
               animate="center"
               exit="exit"
-              className={`${getGridClasses()} max-w-5xl w-full mx-auto`}
+              className={`${getGridClasses()} max-w-8xl w-full mx-auto`}
             >
               {getClientSubset().map((client, index) => (
                 <div key={`client-${activeClientSet}-${index}`} className="flex justify-center items-center">
-                  <img src={client} alt={`Client ${index + 1}`} className="h-28 sm:h-20 md:h-24 object-contain"/>
+                  <img src={client} alt={`Client ${index + 1}`} className="h-28 sm:h-20 md:h-96 object-contain"/>
                 </div>
               ))}
             </motion.div>
@@ -172,11 +172,11 @@ function CandBHome() {
               initial="enter"
               animate="center"
               exit="exit"
-              className={`${getGridClasses()} max-w-5xl w-full mx-auto`}
+              className={`${getGridClasses()} max-w-8xl w-full mx-auto`}
             >
               {getBrandSubset().map((brand, index) => (
                 <div key={`brand-${activeBrandSet}-${index}`} className="flex justify-center items-center">
-                  <img src={brand} alt={`Brand ${index + 1}`} className="h-28 sm:h-20 md:h-32 object-contain"/>
+                  <img src={brand} alt={`Brand ${index + 1}`} className="h-28 sm:h-20 md:h-96 object-contain"/>
                 </div>
               ))}
             </motion.div>
@@ -186,7 +186,7 @@ function CandBHome() {
 
       {/* Button */}
       <a href="/clients">
-      <button  className="bg-white text-black py-2 px-4 sm:px-6 rounded-full font-semibold hover:bg-gray-300 transition mt-2 sm:mt-4">
+      <button  className="bg-white text-black py-2 px-4 sm:px-6 rounded-full font-semibold hover:bg-gray-300 hover:text-[#2c3270] transition duration-300 ease-in-out transform hover:scale-105 shadow-md hover:shadow-lg  transition mt-2 sm:mt-4">
         VIEW ALL CLIENTS
       </button>
       </a>
@@ -223,7 +223,7 @@ function CandBHome() {
         Client-Centric Approach
       </h1>
       <p 
-        className="mt-12 text-lg text-start max-w-4xl"
+        className="mt-12 text-lg md:text-2xl text-start max-w-6xl montserrat"
         data-aos="fade-up"
         data-aos-delay="600"
       >

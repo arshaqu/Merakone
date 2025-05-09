@@ -48,7 +48,7 @@ function Careers() {
                 whileInView="visible"
                 transition={{ duration: 1 }}
                 viewport={{ once: true }}
-                className="text-5xl md:text-6xl font-serif font-semibold text-[#2d3680] mb-4 flex items-center justify-center"
+                className="text-5xl md:text-7xl font-serif font-semibold text-[#2d3680] mb-4 flex items-center justify-center"
                 style={{ fontFamily: 'Against Regular, serif' }}
               >
                 CAREERS
@@ -60,7 +60,7 @@ function Careers() {
                 whileInView="visible"
                 transition={{ duration: 1.5 }}
                 viewport={{ once: true }}
-                className="uppercase tracking-[7px] text-blue-500 flex justify-center font-semibold md:mt-5 p-4"
+                className="uppercase tracking-[7px] text-blue-500 flex justify-center md:text-2xl md:mb-6 md:mt-5 p-4"
               >
                 Home &gt; Careers
               </motion.p>

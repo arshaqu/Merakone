@@ -115,15 +115,15 @@ const projectItems = [
   
           <div className={`relative z-10 max-w-8xl banner-content ${isLoaded ? 'slide-up' : ''}`}>
             <h1
-              className="text-5xl md:text-6xl font-serif font-semibold text-[#2d3680] mb-4"
+              className="text-5xl md:text-8xl font-serif font-semibold text-[#2d3680] mb-4 mt-12"
               style={{ fontFamily: 'Against Regular, serif' }}
-            >
+            > 
               PROJECTS
             </h1>
-            <p className="uppercase text-xs md:text-lg md:tracking-[7px] tracking-[4px] text-blue-500 font-bold md:mt-5 p-2 md:p-4 mb-6 montserrat">
+            <p className="uppercase text-xs md:text-2xl md:tracking-[7px] tracking-[4px] text-blue-500 font-bold md:mt-5 p-2 md:p-4 mb-6 montserrat">
                 Home &gt; PROJECTS
               </p>
-            <p className="text-[#2d3680] md:w-full text-lg md:text-xl montserrat">
+            <p className="text-[#2d3680] md:w-full text-lg md:text-3xl montserrat">
               We'd love to hear from you! Whether you have a question, feedback, or a business inquiry,
               feel free to reach out and connect with our team.
             </p>
@@ -147,32 +147,33 @@ const projectItems = [
                 'linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1))',
             }}
           >
-            <div className="w-full max-w-8xl mx-auto py-12 px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-16">
-              {projectItems.map((item, index) => (
-                <div
-                  key={index}
-                  onClick={() => handleItemClick(item)}
-                  className={`relative overflow-hidden group project-item ${visibleItems.includes(index) ? 'fade-in-up' : 'invisible'} cursor-pointer`}
-                  style={{ animationDelay: `${index * 0.5}s` }}
-                >
-                  <div className="relative w-auto max-w-auto md:h-auto md:auto md:ml-12 p-5 overflow-hidden">
-                    <div className="relative w-full h-full">
-                      <img
-                        src={item.image}
-                        alt="Custom Furniture"
-                        className="w-full h-full project-image transition-transform duration-600 group-hover:scale-105"
-                        loading='lazy'
-                      />
-                      <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-0 transition-opacity mt-[-5px] ml-[-6px] rounded-lg duration-150"></div>
-                    </div>
-                    <div className="absolute inset-0 flex flex-col justify-end p-12 text-start z-10">
-                      <h3 className="text-white w-[75%] text-2xl font-semibold mb-5 font-serif tracking-wide against project-title">
-                        {item.title}
-                      </h3>
+            <div className="w-full md:max-full mx-auto py-12 px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6  md:gap-1">
+            {projectItems.map((item, index) => (
+                  <div
+                    key={index}
+                    onClick={() => handleItemClick(item)}
+                    className={`relative overflow-hidden group project-item  ${visibleItems.includes(index) ? 'fade-in-up' : 'invisible'} cursor-pointer`}
+                    style={{ animationDelay: `${index * 0.5}s` }}
+                  >
+                    <div className="relative w-full max-w-full md:h-[full  overflow-hidden">
+                      <div className="relative w-full  md:p-12 h-full">
+                        <img
+                          src={item.image}
+                          alt="Custom Furniture"
+                          className="w-full h-full object-cover rounded-xl project-image  transition-transform duration-600 group-hover:scale-105"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-black opacity-0  group-hover:opacity-0 transition-opacity rounded-xl duration-150"></div>
+                      </div>
+                      <div className="absolute inset-0 flex flex-col justify-end p-12 text-start z-10">
+                        <h3 style={{fontWeight:'bold'}} className="text-white w-[75%] text-3xl md:text-7xl font-bolder m-5 md:m-12 font-serif tracking-wide against  project-title">
+                          {item.title}
+                        </h3>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+
             </div>
           </div>
         </div>

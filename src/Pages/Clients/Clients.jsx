@@ -21,6 +21,7 @@ import Client11 from '../../Assets/Clients&Brands/Clients/Clients11.png';
 import Client12 from '../../Assets/Clients&Brands/Clients/Clients12.png';
 import Client13 from '../../Assets/Clients&Brands/Clients/Clients13.png';
 import Client14 from '../../Assets/Clients&Brands/Clients/Clients14.png';
+import Client15 from '../../Assets/Clients&Brands/Clients/Clients15.png'
 
 
 import Brand1 from '../../Assets/Clients&Brands/Brands/Brand1.png';
@@ -73,7 +74,7 @@ const Clients = () => {
 
   const clientLogos = [
     Client1,   Client2,  Client3 , Client4  , Client5  , Client6,     Client7 ,
-    Client8, Client9, Client10  ,Client11  , Client12 , Client13  ,Client14
+    Client8, Client9, Client10  ,Client11  , Client12 , Client13  ,Client14 , Client15
   ];
 
   const brandLogos = [
@@ -102,15 +103,15 @@ const Clients = () => {
 
         <div className="relative z-10 max-w-8xl" data-aos="fade-up">
           <h1
-            className="text-5xl md:text-6xl font-serif font-semibold text-[#2d3680] mb-4"
+            className="text-5xl md:text-7xl font-serif font-semibold text-[#2d3680] mb-4 md:mt-36"
             style={{ fontFamily: 'Against Regular, serif' }}
           >
             CLIENTS & BRANDS
           </h1>
-          <p className="uppercase tracking-[7px] text-blue-500 font-semibold md:mt-5 p-4 mb-6">
+          <p className="uppercase tracking-[10px] md:text-2xl text-blue-500  md:mt-5 p-4 mb-6">
             Home &gt; Clients & Brands
           </p>
-          <p className="text-[#2d3680] md:w-full text-lg md:text-xl montserrat">
+          <p className="text-[#2d3680] md:w-full text-lg md:text-3xl montserrat">
             We believe every brand has a story, and every client deserves a partner who listens.
             With a deep understanding of design and strategy, we help brands connect, engage,
             and grow. From concept to creation, we're here to bring your vision to life.
@@ -121,7 +122,7 @@ const Clients = () => {
       {/* Clients Section */}
       <div className="relative z-10 w-full bg-[#dcdcdc] px-4 py-16 md:px-48">
         <h1
-          className="text-5xl md:text-6xl flex justify-center font-serif font-semibold text-[#2d3680] mb-10"
+          className="text-5xl md:text-7xl flex justify-center font-serif font-semibold text-[#2d3680] mb-10"
           style={{ fontFamily: 'Against Regular, serif' }}
           data-aos="fade-up"
         >
@@ -136,7 +137,7 @@ const Clients = () => {
               data-aos-delay={index * 100}
               className="bg-white shadow-md hover:shadow-2xl transition duration-500 ease-in-out transform hover:scale-105 rounded-lg md:p-4 p-3 flex items-center justify-center w-full h-full"
             >
-              <img src={client} alt={`Client ${index + 1}`} className="h-32 md:h-48 object-contain" />
+              <img src={client} alt={`Client ${index + 1}`} className="h-36 md:h-52 object-contain" />
             </div>
           ))}
         </div>
@@ -145,7 +146,7 @@ const Clients = () => {
       {/* Brands Section */}
       <div className="relative z-10 w-full bg-[#d3cfcf] px-4 py-16 md:px-48">
         <h1
-          className="text-5xl md:text-6xl flex justify-center font-serif font-semibold text-[#2d3680] mb-10"
+          className="text-5xl md:text-7xl flex justify-center font-serif font-semibold text-[#2d3680] mb-10"
           style={{ fontFamily: 'Against Regular, serif' }}
           data-aos="fade-up"
         >
@@ -161,7 +162,7 @@ const Clients = () => {
               className="bg-white shadow-md transition-shadow duration-300 rounded-lg md:p-4 p-3 flex items-center justify-center w-full h-full"
             >
               <div className="bg-white shadow-md transition-transform hover:-rotate-12 hover:scale-105 duration-300 rounded-xl p-5 flex items-start justify-center w-full h-full">
-                <img src={brands} alt={`Brand ${index + 1}`} className="h-28 md:h-40 object-contain" />
+                <img src={brands} alt={`Brand ${index + 1}`} className="h-36 md:h-52 object-contain" />
               </div>
             </div>
           ))}

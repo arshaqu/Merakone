@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Footer from '../../Components/Footer'
 import Navbar from '../../Components/Navbar'
 import { IoCheckmarkDoneCircleOutline } from "react-icons/io5"
@@ -14,6 +14,7 @@ import Image1 from '../../../Assets/Projects/kiko_Riyadh_gallery/IMG3.JPG'
 import Image3 from '../../../Assets/Projects/kiko_Riyadh_gallery/IMG4.JPG'
 import Image5 from '../../../Assets/Projects/kiko_Riyadh_gallery/IMG5.JPG'
 
+import { IoClose } from "react-icons/io5"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -22,6 +23,22 @@ import 'aos/dist/aos.css'
 
 
 function Kiko_Riyadh_Gallery() {
+  const [selectedImage, setSelectedImage] = useState(null);
+  const handleImageClick = (imageSrc) => {
+    setSelectedImage(imageSrc);
+    // Prevent scrolling when popup is open
+    document.body.style.overflow = 'hidden';
+  };
+
+
+  const handleClosePopup = () => {
+    setSelectedImage(null);
+    // Restore scrolling
+    document.body.style.overflow = 'auto';
+  };
+
+
+
     useEffect(() => {
         AOS.init({
           duration: 1000,
@@ -35,7 +52,31 @@ function Kiko_Riyadh_Gallery() {
           <div className="relative z-50">
             <Navbar />
           </div>
-    
+      {selectedImage && (
+          <div 
+            className="fixed inset-0 bg-black bg-opacity-75 z-[100] flex items-center justify-center p-4 transition-opacity duration-500 ease-in-out"
+            onClick={handleClosePopup}
+          >
+            <div className="relative max-w-6xl max-h-[90vh] w-full rounded-lg overflow-hidden bg-white shadow-lg transform transition-all duration-500 ease-in-out scale-95 hover:scale-100">
+              {/* Close Button with Hover Effect */}
+              <button
+                className="absolute top-4 right-4 text-white bg-black bg-opacity-50 rounded-full p-3 hover:bg-opacity-80 transition-all"
+                onClick={handleClosePopup}
+              >
+                <IoClose className="w-6 h-6" />
+              </button>
+
+              {/* Image with Subtle Zoom Effect */}
+              <img 
+                src={selectedImage} 
+                alt="Enlarged view" 
+                className="max-h-[90vh] mx-auto object-contain rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-105"
+                onClick={(e) => e.stopPropagation()} // Prevent closing when clicking on the image itself
+              />
+            </div>
+          </div>
+        )}
+
           <div
             className="w-full h-[300px] md:h-[500px] flex flex-col items-center justify-center text-center relative banner-section"
             style={{
@@ -143,7 +184,7 @@ function Kiko_Riyadh_Gallery() {
       <div className="absolute  shadow-inner border border-white/100 z-0" />
     
       {/* Image with Hover Effect */}
-      <div className="relative group overflow-hidden rounded-3xl transition-transform duration-700 ease-in-out hover:scale-[1.02] hover:rotate-[1.0deg] hover:shadow-[0_12px_50px_rgba(0,0,0,0.80)]">
+      <div onClick={() => handleImageClick(Image2)} className="relative group overflow-hidden rounded-3xl transition-transform duration-700 ease-in-out hover:scale-[1.02] hover:rotate-[1.0deg] hover:shadow-[0_12px_50px_rgba(0,0,0,0.80)]">
         {/* Light reflection effect */}
         <div className="absolute inset-0  pointer-events-none opacity-0 group-hover:opacity-60 transition-opacity duration-700 z-10" />
     
@@ -161,25 +202,25 @@ function Kiko_Riyadh_Gallery() {
     
             <div className="p-8 max-w-7xl mx-auto" data-aos="fade-up">
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <div className="col-span-1 mb-4 sm:mb-0 overflow-hidden rounded-lg group" data-aos="zoom-in-up">
+        <div onClick={() => handleImageClick(Image5)} className="col-span-1 mb-4 sm:mb-0 overflow-hidden rounded-lg group" data-aos="zoom-in-up">
           <div className="relative overflow-hidden transition-transform duration-300 ease-in-out transform group-hover:scale-105">
             <img src={Image5} alt="Mall cafe seating area" className="w-full h-80 object-cover transition-all duration-300" />
             <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
           </div>
         </div>
-        <div className="col-span-1 mb-4 sm:mb-0 overflow-hidden rounded-lg group" data-aos="zoom-in-up">
+        <div onClick={() => handleImageClick(Image1)} className="col-span-1 mb-4 sm:mb-0 overflow-hidden rounded-lg group" data-aos="zoom-in-up">
           <div className="relative overflow-hidden transition-transform duration-300 ease-in-out transform group-hover:scale-105">
             <img src={Image1} alt="Paul cafe seating" className="w-full h-80 object-cover transition-all duration-300" />
             <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
           </div>
         </div>
-        <div className="col-span-1 sm:row-span-2 mb-4 sm:mb-0 overflow-hidden rounded-lg group" data-aos="zoom-in-up">
+        <div onClick={() => handleImageClick(Image3)} className="col-span-1 sm:row-span-2 mb-4 sm:mb-0 overflow-hidden rounded-lg group" data-aos="zoom-in-up">
           <div className="relative overflow-hidden transition-transform duration-300 ease-in-out transform group-hover:scale-105">
             <img src={Image3} alt="Close-up seating" className="w-full h-full md:h-[590px] sm:h-full object-cover transition-all duration-300" />
             <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
           </div>
         </div>
-        <div className="col-span-1 sm:col-span-2  overflow-hidden rounded-lg group" data-aos="zoom-in-up">
+        <div onClick={() => handleImageClick(Image4)} className="col-span-1 sm:col-span-2  overflow-hidden rounded-lg group" data-aos="zoom-in-up">
           <div className="relative overflow-hidden transition-transform duration-300 ease-in-out transform group-hover:scale-105">
             <img src={Image4} alt="Panoramic view" className="w-full h-80 sm:h-96 object-cover transition-all duration-300" />
             <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
@@ -200,7 +241,7 @@ function Kiko_Riyadh_Gallery() {
      <div className="text-center md:text-left mb-10 md:mb-0">
         <p className="text-xs tracking-widest text-orange-500 hover:text-gray-800 uppercase mb-1">Previous Project</p>
         <h2 className="text-xl font-serif text-black hover:text-orange-500 transition-colors duration-300 cursor-pointer">
-          PAUL LE CAFE RIYADH
+          060 SEC AMWAJ MALL
         </h2>
       </div>
      </a>
@@ -208,11 +249,11 @@ function Kiko_Riyadh_Gallery() {
       <div className="hidden md:block h-14 border-l border-orange-300 mx-10" />
     
       {/* Next Project */}
-      <a href="/projects_reserved">
+      <a href="/giordano">
       <div  className="text-center md:text-right">
         <p className="text-xs tracking-widest text-blue-500 hover:text-gray-800 uppercase mb-1">Next Project</p>
         <h2 className="text-xl font-serif text-black hover:text-blue-600 transition-colors duration-300 cursor-pointer">
-        RESERVED GALLERY MALL
+        GIORDANO
         </h2>
       </div>
       </a>

@@ -8,6 +8,10 @@ import Loader from '../Components/Loader';
 import ContactBg from '../../Assets/ContactUs/ContactusBan.png';
 import ContactImg from '../../Assets/ContactUs/ContactImg.png'
 
+import { CiFacebook } from "react-icons/ci";
+import { PiWhatsappLogoLight } from "react-icons/pi";
+import { CiLinkedin } from "react-icons/ci";
+import { CiInstagram } from "react-icons/ci";
 
 
 
@@ -52,10 +56,10 @@ function ContactUs() {
             >
               CONTACT US
             </h1>
-            <p className="uppercase tracking-[7px] text-blue-500 font-semibold md:mt-5 p-4 mb-6">
+            <p className="uppercase tracking-[7px] text-blue-500 md:text-2xl md:mt-5 p-4 mb-6">
               Home &gt; Contact Us
             </p>
-            <p className="text-[#2d3680] md:w-full text-lg md:text-xl montserrat">
+            <p className="text-[#2d3680] md:w-full text-lg md:text-3xl montserrat">
               We'd love to hear from you! Whether you have a question, feedback, or a business inquiry,
               feel free to reach out and connect with our team.
             </p>
@@ -66,37 +70,41 @@ function ContactUs() {
         <div className="bg-[#dcdcdc] py-12 px-4 md:px-16">
           {/* Contact Info Row */}
           <div
-            className="flex flex-col md:flex-row justify-between text-[#2d3680] text-md mb-10 md:ml-96 montserrat"
+            className="flex flex-col md:flex-row justify-between text-[#2d3680] text-md mb-10  montserrat"
             data-aos="fade-up"
             data-aos-delay="100"
           >
             <div className="mb-6 md:mb-0">
-              <h2 className="font-bold text-2xl mb-2">WHERE TO FIND US</h2>
-              <p>
+              <h2 className="font-bold text-4xl mb-2">WHERE TO FIND US</h2>
+              <p className=' md:text-3xl' >
                 Saudi Arabia, Head Office: PB NO: 12629,<br />
                 Mujahid Street, Riyadh, Saudi Arabia<br />
                 Regional Office: Bahrain KCity, Manama, Bahrain
               </p>
             </div>
             <div className="mb-6 md:mb-0">
-              <h2 className="font-bold text-xl mb-2">DROP US A MESSAGE</h2>
-              <p>
+              <h2 className="font-bold text-xl mb-2  md:text-4xl">DROP US A MESSAGE</h2>
+              <p className=' md:text-3xl'>
                 Email:{' '}
                 <a href="mailto:info@merakone.com" className="text-blue-700 hover:underline">
                   info@merakone.com
                 </a>
               </p>
-              <h2 className="font-bold text-xl mt-4 mb-2">GIVE US A RING</h2>
-              <p>+91 25 2534 2565</p>
+              <h2 className="font-bold text-xl mt-4 mb-2  md:text-4xl">GIVE US A RING</h2>
+              <p className=' md:text-3xl'>+91 25 2534 2565</p>
+              <p className='md:text-3xl'>00966545059009</p>
+              <p className='md:text-3xl'>00966543669610</p>
             </div>
             <div>
-              <h2 className="font-bold text-xl mb-2">CONNECT WITH US</h2>
-              <div className="flex space-x-4 text-2xl mt-2">
-                <a href="#"><i className="fab fa-instagram"></i></a>
-                <a href="#"><i className="fab fa-linkedin-in"></i></a>
-                <a href="#"><i className="fab fa-facebook"></i></a>
-              </div>
-              <p className="text-sm mt-4">© 2025 Merak One. All rights reserved.</p>
+              <h2 className="font-bold text-xl md:text-4xl mb-2">CONNECT WITH US</h2>
+              <div className="flex space-x-4 text-4xl md:text-7xl mt-2">
+  <a href="#"><CiInstagram /></a>
+  <a href="#"><CiLinkedin /></a>
+  <a href="#"><CiFacebook /></a>
+  <a href="#"><PiWhatsappLogoLight /></a>
+</div>
+
+             
             </div>
           </div>
   
@@ -113,14 +121,14 @@ function ContactUs() {
             {/* Form */}
             <div className="md:w-1/2" data-aos="fade-left" data-aos-delay="400">
               <h2
-                className="text-5xl font-serif text-[#2d3680] mb-6"
+                className="text-5xl md:text-6xl font-serif text-[#2d3680] mb-6"
                 style={{ fontFamily: 'Against Regular, serif' }}
               >
                 Say Hello
               </h2>
               <form className="flex flex-col space-y-6">
                 <div data-aos="fade-right" data-aos-delay="300">
-                  <label className="block mb-2 text-lg montserrat">Hello there, My name is</label>
+                  <label className="block mb-2 text-lg md:text-2xl montserrat">Hello there, My name is</label>
                   <input
                     type="text"
                     placeholder="Your Name Here"
@@ -128,14 +136,14 @@ function ContactUs() {
                   />
                 </div>
                 <div data-aos="fade-left" data-aos-delay="400">
-                  <label className="block text-lg montserrat">And I'm looking for</label>
+                  <label className="block text-lg  md:text-2xl montserrat">And I'm looking for</label>
                   <textarea
                     placeholder="Your message"
                     className="w-full border bg-[#dcdcdc] border-gray-400 p-3 rounded-md h-32 resize-none"
                   />
                 </div>
                 <div data-aos="fade-right" data-aos-delay="300">
-                  <label className="block mb-2 text-lg montserrat">You can reach me at
+                  <label className="block mb-2 text-lg  md:text-2xl montserrat">You can reach me at
                   </label>
                   <input
                     type="text"
@@ -147,7 +155,7 @@ function ContactUs() {
                   type="submit"
                   data-aos="zoom-in-up"
                   data-aos-delay="500"
-                  className="bg-[#2d3680] text-white px-6 py-3 rounded-lg hover:bg-[#1f2766] transition duration-300 montserrat"
+                  className="bg-[#2d3680] text-white  md:text-2xl px-6 py-3 rounded-lg hover:bg-[#1f2766] transition duration-300 montserrat"
                 >
                   Send Message
                 </button>
@@ -163,10 +171,10 @@ function ContactUs() {
   >
     {/* Heading */}
     <div className="md:w-1/2">
-      <h2 className="text-3xl font-bold text-[#2d3680] against mb-4">
+      <h2 className="text-3xl  md:text-5xl font-bold text-[#2d3680] against mb-4">
         Our Precious Location
       </h2>
-      <p className="text-lg text-gray-700 montserrat">
+      <p className="text-lg  md:text-2xl text-gray-700 montserrat">
         Visit our regional and head offices. We're always happy to meet you in person and show you our workspaces!
       </p>
     </div>
@@ -187,8 +195,8 @@ function ContactUs() {
     </div>
   </div>
 </div>
-  
-        {/* Footer */}
+
+      {/* Footer */}
         <Footer />
       </div>
     );

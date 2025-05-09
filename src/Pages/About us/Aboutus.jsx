@@ -43,19 +43,19 @@ function Aboutus() {
               color: '#fff',
             }}
           >
-            <div className='md:mt-48 mt-12'>
-              <h1 className='md:text-[60px]  text-[30px] against' style={{ color: '#2d3680' }}>
+            <div className='md:mt-48 mt-32'>
+              <h1 className='md:text-8xl  text-2xl against' style={{ color: '#2d3680' }}>
                 About Us
               </h1>
               <h2
-                className='text-blue-600 montserrat text-[1px] md:text-[10px] mb-5'
+                className='text-blue-600 mt-12 montserrat text-[1px] md:text-2xl mb-5'
                 style={{
                   marginBottom: '5rem',
-                  letterSpacing: '6px',
-                  fontWeight: 400,
+                  letterSpacing: '10px',
+            
                 }}
               >
-                HOME &gt; ABOUT US
+                <a href="/">HOME</a> &gt; ABOUT US
               </h2>
             </div>
           </div>

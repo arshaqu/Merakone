@@ -32,7 +32,7 @@ function WhatDrivesUs() {
         </div>
 
         {/* List Section */}
-        <ul className="mt-12 md:mt-6  text-left mx-auto md:w-full space-y-1 text-lg" data-aos="fade-up">
+        <ul className="mt-12 md:mt-6  text-left mx-auto md:w-full space-y-1 text-2xl montserrat" data-aos="fade-up">
           
           
           <li className="flex items-start md:mt-12">
@@ -42,7 +42,7 @@ function WhatDrivesUs() {
           </li>
           <li className="flex items-start md:mt-12">
             <span className="mr-2">✦</span>
-            PAdvanced 1,000 sq. meter factory in Riyadh for bespoke joinery and furniture
+            Advanced 1,000 sq. meter factory in Riyadh for bespoke joinery and furniture
             solutions.
           </li>
           <li className="flex items-start">

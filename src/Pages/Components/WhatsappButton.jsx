@@ -12,7 +12,7 @@ const WhatsappButton = () => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <FaWhatsapp size={28} />
+      <FaWhatsapp size={36} />
     </a>
   );
 };

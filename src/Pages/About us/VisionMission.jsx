@@ -37,6 +37,7 @@ function VisionMission() {
     </h1>
 
     <p
+    style={{letterSpacing:'2px'}}
       className="md:w-full md:mt-7 mt-4 text-3xl md:text-2xl montserrat md:mx-[70px]"
       data-aos="fade-up"
     >
@@ -55,6 +56,7 @@ function VisionMission() {
     </h1>
 
     <p
+    style={{letterSpacing:'2px'}}
       className="mt-4 md:w-full text-3xl md:text-2xl montserrat md:mx-[70px]"
       data-aos="fade-up"
     >
@@ -95,7 +97,7 @@ function VisionMission() {
 
   {/* Text Content */}
   <div
-    className="relative z-10 w-full text-white montserrat p-4 md:p-12 max-w-5xl text-\"
+    className="relative z-10 w-full text-white montserrat p-4 md:p-12 max-w-5xl "
     data-aos="fade-up"
   >
     
@@ -104,35 +106,34 @@ function VisionMission() {
   data-aos="fade-up"
 >
   <h1 className="text-3xl md:text-5xl font-semibold mb-6 against">
-    Our Scope of Work
+    Core Values
   </h1>
 
-  <p className="text-md md:text-2xl mt-5 md:mt-1 mb-6 text-left">
-    Our post-shop opening services are designed to provide comprehensive support,
-    ensuring your space is ready for business and maintained to the highest standards:
+  <p style={{letterSpacing:'2px'}} className="text-md md:text-2xl mt-5 md:mt-1 mb-6 text-left">
+  Our core values define who we are. Driven by creativity, integrity, and a client-first approach, we deliver spaces that inspire and relationships built on trust.
   </p>
 
   <div className="flex justify-">
     <div className="text-left md:text-2xl space-y-4">
-      <p>
+      <p style={{letterSpacing:'2px'}}>
         <span className="mr-2">✦</span>
-        <strong className="mr-3">Snag Completion</strong>
+        <strong className="mr-3">Innovation</strong>
       </p>
-      <p>
+      <p style={{letterSpacing:'2px'}}>
         <span className="mr-2">✦</span>
-        <strong className="mr-3">On-Site Support Until Shop Opening</strong>
+        <strong className="mr-3">Integrity</strong>
       </p>
-      <p>
+      <p style={{letterSpacing:'2px'}}>
         <span className="mr-2">✦</span>
-        <strong className="mr-3">Maintenance and Repair Services</strong>
+        <strong className="mr-3">Excellence</strong>
       </p>
-      <p>
+      <p style={{letterSpacing:'2px'}}>
         <span className="mr-2">✦</span>
-        <strong className="mr-3">Coordination with Related Parties</strong>
+        <strong className="mr-3">Client-Centricity</strong>
       </p>
-      <p>
+      <p style={{letterSpacing:'2px'}}>
         <span className="mr-2">✦</span>
-        <strong className="mr-3">Preventive Maintenance Plans</strong>
+        <strong className="mr-3">Collaboration</strong>
       </p>
     </div>
   </div>

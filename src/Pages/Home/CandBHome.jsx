@@ -136,53 +136,63 @@ function CandBHome() {
       <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 sm:mb-6 against">
         Our Clients & Brand
       </h2>
-      <p className="text-base text-lg md:text-2xl max-w-8xl mx-auto mb-8 sm:mb-12 text-gray-400">
+      <p style={{letterSpacing:'2px'}} className="text-base text-lg md:text-2xl max-w-8xl mx-auto mb-8 sm:mb-12 text-gray-400">
         We take pride in collaborating with top brands and valued clients who trust us for quality and innovation. Our partnerships span across various industries, reflecting our commitment to excellence and customer satisfaction.
       </p>
 
       {/* Clients Section */}
-      <div className="mb-8 sm:mb-12 md:mb-16">
-        <div className="h-28 sm:h-32 md:h-auto flex justify-center items-center overflow-hidden">
-          <AnimatePresence mode="wait">
-            <motion.div 
-              key={`client-container-${clientKey}`}
-              variants={clientVariants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              className={`${getGridClasses()} max-w-8xl w-full mx-auto`}
-            >
-              {getClientSubset().map((client, index) => (
-                <div key={`client-${activeClientSet}-${index}`} className="flex justify-center items-center">
-                  <img src={client} alt={`Client ${index + 1}`} className="h-28 sm:h-20 md:h-96 object-contain"/>
-                </div>
-              ))}
-            </motion.div>
-          </AnimatePresence>
-        </div>
-      </div>
+    {/* Clients Section */}
+<div className="mb-8 sm:mb-12 md:mb-16">
+  <div className="h-28 sm:h-32 md:h-36 rounded-2xl flex justify-center items-center overflow-hidden">
+    <AnimatePresence mode="wait">
+      <motion.div 
+        key={`client-container-${clientKey}`}
+        variants={clientVariants}
+        initial="enter"
+        animate="center"
+        exit="exit"
+        className={`${getGridClasses()} max-w-8xl w-full mx-auto`}
+      >
+        {getClientSubset().map((client, index) => (
+          <div 
+            key={`client-${activeClientSet}-${index}`} 
+            className="flex justify-center items-center bg-white p-4 rounded-2xl shadow-lg"
+          >
+            <img src={client} alt={`Client ${index + 1}`} className="h-28 sm:h-20 md:h-96 object-contain"/>
+          </div>
+        ))}
+      </motion.div>
+    </AnimatePresence>
+  </div>
+</div>
+
 
       {/* Brands Section */}
-      <div className="mb-8 sm:mb-10 md:mb-12">
-        <div className="h-28 sm:h-28 md:h-32 flex justify-center items-center overflow-hidden">
-          <AnimatePresence mode="wait">
-            <motion.div 
-              key={`brand-container-${brandKey}`}
-              variants={brandVariants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              className={`${getGridClasses()} max-w-8xl w-full mx-auto`}
-            >
-              {getBrandSubset().map((brand, index) => (
-                <div key={`brand-${activeBrandSet}-${index}`} className="flex justify-center items-center">
-                  <img src={brand} alt={`Brand ${index + 1}`} className="h-28 sm:h-20 md:h-96 object-contain"/>
-                </div>
-              ))}
-            </motion.div>
-          </AnimatePresence>
-        </div>
-      </div>
+<div  className="mb-8 sm:mb-10 md:mb-12">
+  <div className="h-28 sm:h-28 md:h-36 flex justify-center items-center overflow-hidden">
+    <AnimatePresence mode="wait">
+      <motion.div 
+        key={`brand-container-${brandKey}`}
+        variants={brandVariants}
+        initial="enter"
+        animate="center"
+        exit="exit"
+        className={`${getGridClasses()} max-w-8xl w-full mx-auto`}
+      >
+        {getBrandSubset().map((brand, index) => (
+          <div 
+           
+            key={`brand-${activeBrandSet}-${index}`} 
+            className="flex justify-center items-center bg-white p-4 rounded-lg shadow-lg"
+          >
+            <img src={brand} alt={`Brand ${index + 1}`} className="h-28 sm:h-20 md:h-96 object-contain"/>
+          </div>
+        ))}
+      </motion.div>
+    </AnimatePresence>
+  </div>
+</div>
+
 
       {/* Button */}
       <a href="/clients">
@@ -226,6 +236,7 @@ function CandBHome() {
         className="mt-12 text-lg md:text-2xl text-start max-w-6xl montserrat"
         data-aos="fade-up"
         data-aos-delay="600"
+        style={{letterSpacing:'2px'}}
       >
         A client-centric approach is a business strategy that prioritizes the needs, preferences, and expectations of clients
         at every stage of interaction. It involves understanding their unique requirements, providing personalized solutions,

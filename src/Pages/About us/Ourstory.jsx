@@ -52,7 +52,7 @@ function Ourstory() {
               Our Story
             </h1>
             <p
-              style={{ color: "#2d3680" }}
+              style={{ color: "#2d3680" ,letterSpacing:'2px' }}
               className="md:text-2xl mt-6 leading-relaxed montserrat mt-12 p-5"
               data-aos="fade-right"
               data-aos-delay="400"
@@ -62,14 +62,14 @@ function Ourstory() {
 
             <h1
               className="text-5xl  mt-12 p-5"
-              style={{ fontFamily: "Against Regular, sans-serif", color: "#2d3680" }}
+              style={{ fontFamily: "Against Regular, sans-serif", color: "#2d3680"  }}
               data-aos="fade-right"
               data-aos-delay="600"
             >
               Experience & Passion
             </h1>
             <p 
-              style={{ color: "#2d3680" }} 
+              style={{ color: "#2d3680" ,letterSpacing:'2px'}} 
               className="md:text-2xl mt-6 leading-relaxed mt-8 md:mt-2 p-5"
               data-aos="fade-right"
               data-aos-delay="800"

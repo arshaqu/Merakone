@@ -36,7 +36,7 @@ import ProjectBg from '../../Assets/Projects/ProjectBg.jpg'
 
 const projectItems = [
     { image: Asset1, title: "RESERVED RIYADH GALLERY MALL RIYADH"    ,path:"/projects_reserved" },
-    { image: Asset2, title: "PAUL @ PANORAMA MALL RIYADH"   ,path: "/projects_paul"},
+    { image: Asset2, title: "PAUL LE CAFE @PANORAMA MALL RIYADH"   ,path: "/projects_paul"},
     { image: Asset3, title: "AL HUSSAINI KADI MALL JIZAN"    ,path: "/al_hussaini_jizan" },
     { image: Asset21, title: "VERO MODA" ,   path:'/veromoda' },
     { image: Asset4, title: "INTIMISSIMI PANORAMA MALL RIYADH"  ,path: "/intimissimi" },
@@ -166,9 +166,13 @@ const projectItems = [
                         <div className="absolute inset-0 bg-black opacity-0  group-hover:opacity-0 transition-opacity rounded-xl duration-150"></div>
                       </div>
                       <div className="absolute inset-0 flex flex-col justify-end p-12 text-start z-10">
-                        <h3 style={{fontWeight:'bold'}} className="text-white w-[75%] text-3xl md:text-7xl font-bolder m-5 md:m-12 font-serif tracking-wide against  project-title">
-                          {item.title}
-                        </h3>
+                       <h3
+  style={{ fontWeight: 'bold', letterSpacing: '2px' }}
+  className="text-white w-[70%] text-3xl md:text-5xl m-5 md:m-16 font-serif tracking-wide leading-relaxed project-title against"
+>
+  {item.title}
+</h3>
+
                       </div>
                     </div>
                   </div>

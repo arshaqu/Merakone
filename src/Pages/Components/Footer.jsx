@@ -44,8 +44,8 @@ function Footer() {
                   Head Office: PB NO: 12629, Mujahid Street, Riyadh, Saudi Arabia <br />
                   Regional Office: Bahrain, KCity, Manama, Bahrain
                 </p>
-                <p style={{color:'#2d3680'}} className="text-gray-800 font-semibold text-sm mt-3">
-                  Email: <a href="mailto:info@merakone.com" className="text-blue-500">info@merakone.com</a>
+                <p style={{color:'#2d3680'}} className="text-gray-800 font-semibold text-sm md:text-lg mt-3">
+                  Email: <a href="mailto:info@merakone.com" className="text-blue-500 md:text-2xl">info@merakone.com</a>
                 </p>
       
                 <p style={{color:'#2d3680'}} className="text-gray-600 text-sm mt-4">

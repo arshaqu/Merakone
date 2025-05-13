@@ -39,7 +39,7 @@ function HomeProject() {
       </h2>
 
     <div className='md:flex md:items-center md:justify-center'>
-    <p className="text-lg p-4 md:text-2xl md:flex md:items-center md:max-w-4xl md:mb-0 mb-12 montserrat md:mt-5 " data-aos="fade-up" data-aos-delay="200">
+    <p style={{letterSpacing:'2px'}} className="text-lg p-4 md:text-2xl md:flex md:items-center md:max-w-4xl md:mb-0 mb-12 montserrat md:mt-5 " data-aos="fade-up" data-aos-delay="200">
         We believe in turning ideas into reality through innovation and precision. Our portfolio showcases a diverse range of projects, from dynamic web applications to seamless user experiences.
       </p>
     </div>
@@ -55,7 +55,7 @@ function HomeProject() {
               <div className="w-full h-full overflow-hidden">
                 <img src={Image1} alt="" className="w-full h-full object-cover rounded-lg transition-transform duration-500 group-hover:scale-110" />
               </div>
-              <div className="absolute bottom-0 w-full bg-black bg-opacity-50 hover:bg-opacity-90 hover:bg-[#474e92] text-white text-center py-4 text-sm md:text-2xl font-bold montserrat transition duration-300 opacity-90">
+              <div style={{letterSpacing:'2px'}} className="absolute bottom-0 w-full bg-black bg-opacity-50 hover:bg-opacity-90 hover:bg-[#474e92] text-white text-center py-4 text-sm md:text-2xl font-bold montserrat transition duration-300 opacity-90">
                 AL - HUSSAINI KADI MALL JIZAN
               </div>
            </a>
@@ -67,7 +67,7 @@ function HomeProject() {
               <div className="w-full h-full overflow-hidden">
                 <img src={Image2} alt="" className="w-full h-full object-cover rounded-lg transition-transform duration-500 group-hover:scale-110" />
               </div>
-              <div className="absolute bottom-0 w-full bg-black bg-opacity-50 hover:bg-opacity-90 hover:bg-[#474e92] text-white text-center py-4 text-sm md:text-2xl font-bold montserrat transition duration-300 opacity-90">
+              <div style={{letterSpacing:'2px'}} className="absolute bottom-0 w-full bg-black bg-opacity-50 hover:bg-opacity-90 hover:bg-[#474e92] text-white text-center py-4 text-sm md:text-2xl font-bold montserrat transition duration-300 opacity-90">
                 PAUL LE CAFE RIYADH GALLERY MALL RIYADH
               </div>
             </a>
@@ -80,8 +80,8 @@ function HomeProject() {
             <div className="w-full h-full md:mt-2 overflow-hidden">
               <img src={Image3} alt="" className="w-full h-[620px] object-cover rounded-lg transition-transform duration-500 group-hover:scale-110" />
             </div>
-            <div className="absolute bottom-0 w-full bg-black bg-opacity-50 hover:bg-opacity-90 hover:bg-[#474e92] text-white text-center py-4 text-sm md:text-2xl font-bold montserrat transition duration-300 opacity-90">
-              RESERVED RIYADH GALERY MALL
+            <div style={{letterSpacing:'2px'}} className="absolute bottom-0 w-full bg-black bg-opacity-50 hover:bg-opacity-90 hover:bg-[#474e92] text-white text-center py-4 text-sm md:text-2xl font-bold montserrat transition duration-300 opacity-90">
+              RESERVED RIYADH GALLERY MALL
             </div>
           </a>
           </div>
@@ -94,7 +94,7 @@ function HomeProject() {
               <div className="w-full h-full overflow-hidden">
                 <img src={Image4} alt="" className="w-full h-full object-cover rounded-lg transition-transform duration-500 group-hover:scale-110" />
               </div>
-              <div className="absolute bottom-0 w-full bg-black bg-opacity-50 hover:bg-opacity-90 hover:bg-[#474e92] text-white text-center py-4 text-sm md:text-2xl font-bold montserrat transition duration-300 opacity-90">
+              <div style={{letterSpacing:'2px'}} className="absolute bottom-0 w-full bg-black bg-opacity-50 hover:bg-opacity-90 hover:bg-[#474e92] text-white text-center py-4 text-sm md:text-2xl font-bold montserrat transition duration-300 opacity-90">
                 INTIMISSIMI PANORAMA MALL RIYADH
               </div>
             </div>
@@ -106,8 +106,8 @@ function HomeProject() {
               <div className="w-full h-full overflow-hidden">
                 <img src={Image5} alt="" className="w-full h-full object-cover rounded-lg transition-transform duration-500 group-hover:scale-110" />
               </div>
-              <div className="absolute bottom-0 w-full bg-black bg-opacity-50 hover:bg-opacity-90 hover:bg-[#474e92] text-white text-center py-4 text-sm md:text-2xl font-bold montserrat transition duration-300 opacity-90">
-                AL-HUSSAINI LAVANDA ABHA
+              <div style={{letterSpacing:'2px'}} className="absolute bottom-0 w-full bg-black bg-opacity-50 hover:bg-opacity-90 hover:bg-[#474e92] text-white text-center py-4 text-sm md:text-2xl font-bold montserrat transition duration-300 opacity-90">
+                KIKO MILANO RIYADH GALLERY MALL
               </div>
             </a>
             </div>

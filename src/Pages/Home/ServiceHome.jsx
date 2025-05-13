@@ -22,7 +22,7 @@ function ServiceHome() {
          position: 'relative', // Add relative positioning
        }}>
       <h2  style={{color:"#2d3680" }} className="text-4xl md:text-6xl  font-bold mb-4 mt-12 md:mt-[50px] against">Our Services</h2>
-      <p style={{color:"#2d3680"}} className="text-xl md:text-2xl mt-10 md:mt-[40px]  md:ml-[190px] md:mr-[230px] montserrat md:w-[1000px]">
+      <p  style={{color:"#2d3680" , letterSpacing:'2px'}} className="text-xl md:text-2xl mt-10 md:mt-[40px]  md:ml-[190px] md:mr-[230px] montserrat md:w-[1000px]">
         At MerakOne Interiors, we specialize in delivering top-quality interior solutions tailored to meet the unique needs of our clients. From conceptualization to execution, we ensure seamless and innovative solutions across various industries.
       </p>
 

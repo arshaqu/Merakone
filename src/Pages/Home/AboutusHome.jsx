@@ -22,7 +22,7 @@ function Aboutus() {
       <div className='md:flex md:justify-between md:items-center w-full'>
         <div className='w-full md:w-2/3 md:pr-8  md:ml-[158px]'>
           <h1 className='md:ml-20 mt-12  text-5xl md:text-7xl' style={{fontFamily: 'Against Regular, sans-serif' }}>About Us</h1>
-          <p className='md:mt-20 mt-10 md:text-2xl  montserrat md:ml-[70px] md:mr-[70px]' style={{ marginBottom: '1rem' }}>
+          <p  className='md:mt-20 mt-10 md:text-2xl  montserrat md:ml-[70px] md:mr-[70px]' style={{ marginBottom: '1rem' }}>
           At <strong>MerakOne</strong>, we transform visions into reality through exceptional interior fit-out
           solutions across Saudi Arabia and Bahrain. Specializing in <strong>Luxury Retail, Retail, Food
           and Beverages, Commercial Workplaces, and Residential</strong> sectors, we deliver

@@ -35,21 +35,21 @@ function WhatDrivesUs() {
         <ul className="mt-12 md:mt-6  text-left mx-auto md:w-full space-y-1 text-2xl montserrat" data-aos="fade-up">
           
           
-          <li className="flex items-start md:mt-12">
+          <li style={{letterSpacing:'2px'}} className="flex items-start md:mt-12">
             <span className="mr-2">✦</span>
             Expertise across diverse sectors: Luxury Retail, Retail, Food & Beverages,
             Commercial, and Residential
           </li>
-          <li className="flex items-start md:mt-12">
+          <li style={{letterSpacing:'2px'}} className="flex items-start md:mt-12">
             <span className="mr-2">✦</span>
             Advanced 1,000 sq. meter factory in Riyadh for bespoke joinery and furniture
             solutions.
           </li>
-          <li className="flex items-start">
+          <li style={{letterSpacing:'2px'}} className="flex items-start">
             <span className="mr-2">✦</span>
             Proven presence in Saudi Arabia and Bahrain, delivering turnkey fit-out excellence.
           </li>
-          <li className="flex items-start">
+          <li style={{letterSpacing:'2px'}} className="flex items-start">
             <span className="mr-2">✦</span>
             Dedicated to quality, innovation, and client satisfaction.
           </li>

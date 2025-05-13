@@ -151,14 +151,14 @@ function CandBHome() {
         initial="enter"
         animate="center"
         exit="exit"
-        className={`${getGridClasses()} max-w-8xl w-full mx-auto`}
+        className={`${getGridClasses()} max-w-8xl w-full mx-auto gap-4`}
       >
         {getClientSubset().map((client, index) => (
           <div 
             key={`client-${activeClientSet}-${index}`} 
-            className="flex justify-center items-center bg-white p-4 rounded-2xl shadow-lg"
+            className="flex justify-center items-center bg-white p-4 rounded-3xl shadow-6xl"
           >
-            <img src={client} alt={`Client ${index + 1}`} className="h-28 sm:h-20 md:h-96 object-contain"/>
+            <img src={client} alt={`Client ${index + 1}`} className="h-20 sm:h-20 md:h-28 object-contain"/>
           </div>
         ))}
       </motion.div>
@@ -167,9 +167,10 @@ function CandBHome() {
 </div>
 
 
+
       {/* Brands Section */}
 <div  className="mb-8 sm:mb-10 md:mb-12">
-  <div className="h-28 sm:h-28 md:h-36 flex justify-center items-center overflow-hidden">
+  <div className="h-28 sm:h-32 md:h-36 rounded-2xl flex justify-center items-center overflow-hidden">
     <AnimatePresence mode="wait">
       <motion.div 
         key={`brand-container-${brandKey}`}
@@ -181,11 +182,10 @@ function CandBHome() {
       >
         {getBrandSubset().map((brand, index) => (
           <div 
-           
-            key={`brand-${activeBrandSet}-${index}`} 
-            className="flex justify-center items-center bg-white p-4 rounded-lg shadow-lg"
+            key={`client-${activeClientSet}-${index}`} 
+            className="flex justify-center items-center bg-white p-4 rounded-3xl shadow-lg"
           >
-            <img src={brand} alt={`Brand ${index + 1}`} className="h-28 sm:h-20 md:h-96 object-contain"/>
+            <img src={brand} alt={`Client ${index + 1}`} className="h-20 sm:h-20 md:h-28 object-contain"/>
           </div>
         ))}
       </motion.div>

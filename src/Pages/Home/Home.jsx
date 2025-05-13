@@ -84,7 +84,7 @@ function Home() {
                 style={{ marginBottom: '1rem', letterSpacing: '8px' }}
               >
               <p className="text-lg md:text-2xl text-blue-500">
-  KINGDOM OF SAUDI ARABIA <span className="mx-2 text-blue-500">  |  </span> BAHRAIN 
+  KINGDOM OF SAUDI ARABIA <span className="mx-2 text-blue-900">  |  </span> BAHRAIN 
 </p>
 
               </h2>

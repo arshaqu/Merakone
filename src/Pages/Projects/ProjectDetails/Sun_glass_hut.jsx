@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import Footer from '../../Components/Footer'
 import Navbar from '../../Components/Navbar'
-import { IoCheckmarkDoneCircleOutline } from "react-icons/io5"
 import PaulBg from '../../../Assets/Projects/Paul/PaulBg.jpg'
 import LineBg from '../../../Assets/Projects/Paul/Bg.png'
+import { FaCity } from "react-icons/fa";
 import { CiLocationOn } from "react-icons/ci"
 import { GiShop } from "react-icons/gi"
 import { IoClose } from "react-icons/io5"
@@ -104,10 +104,10 @@ function Sun_glass_hut() {
                     {/* Location */}
                     <div className="flex flex-col items-center" data-aos="zoom-in">
                       <CiLocationOn className="w-12 h-12 md:w-20 md:h-20 mb-2" />
-                      <span className="bg-white text-[#2d3680] px-3 py-1 rounded-md text-sm md:text-lg font-medium mb-2 mt-2">
-                        Location
+                      <p className="text-base md:text-lg tracking-[4px]">LOCATION</p>
+                      <span className="bg-white tracking-[2px] text-[#2d3680] px-3 py-1 rounded-md text-sm md:text-lg font-medium mb-2 mt-2">
+                        ANDALUS MALL
                       </span>
-                      <p className="text-base md:text-lg">ANDALUS MALL JEDDAH</p>
                     </div>
                 
                     {/* Divider */}
@@ -116,10 +116,10 @@ function Sun_glass_hut() {
                     {/* Sector */}
                     <div className="flex flex-col items-center" data-aos="zoom-in">
                       <GiShop className="w-12 h-12 md:w-20 md:h-20 mb-2" />
-                      <span className="bg-white text-[#2d3680] px-3 py-1 rounded-md text-sm md:text-lg font-medium mb-2 mt-2">
-                        Sector
+                      <p className="text-base md:text-xl tracking-[4px]">SECTOR</p>
+                      <span className="bg-white tracking-[4px] text-[#2d3680] px-3 py-1 rounded-md text-sm md:text-lg font-medium mb-2 mt-2">
+                        RETAIL
                       </span>
-                      <p className="text-base md:text-xl">GIORDANO</p>
                     </div>
                 
                     {/* Divider */}
@@ -127,17 +127,17 @@ function Sun_glass_hut() {
                 
                     {/* Completed */}
                     <div className="flex flex-col items-center" data-aos="zoom-in">
-                      <IoCheckmarkDoneCircleOutline className="w-12 h-12 md:w-20 md:h-20 mb-2" />
-                      <span className="bg-white text-[#2d3680] px-3 py-1 rounded-md text-sm md:text-lg font-medium mb-2 mt-2">
-                        Status
+                      <FaCity className="w-12 h-12 md:w-20 md:h-20 mb-2" />
+                      <p className="text-base md:text-xl tracking-[4px]">CITY</p>
+                      <span className="bg-white text-[#2d3680] tracking-[4px] px-3 py-1 rounded-md text-sm md:text-lg font-medium mb-2 mt-2">
+                        JEDDAH
                       </span>
-                      <p className="text-base md:text-xl">Completed</p>
                     </div>
                   </div>
                 
                   {/* Description */}
                   <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-                    <p style={{fontWeight:'bold'}} className=" text-sm md:text-lg font-bold text-white tracking-wide leading-relaxed text-center bg-white mt-6 bg-clip-text text-transparent drop-shadow-lg against">
+                    <p style={{fontWeight:'bold'}} className=" text-sm md:text-lg tracking-[2px] font-bold text-white tracking-wide leading-relaxed text-center bg-white mt-6 bg-clip-text text-transparent drop-shadow-lg against">
                     COMPLETE INTERIOR FIT-OUT INCLUDING CIVIL, INTERIOR DECORATIONS, FURNITURE INSTALLATIONS,CIVIL & ELECTRO MECHANICAL WORKS
                     </p>
                   </div>

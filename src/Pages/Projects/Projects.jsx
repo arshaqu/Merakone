@@ -29,6 +29,11 @@ import Asset19 from '../../Assets/Projects/Asset19.png'
 import Asset20 from '../../Assets/Projects/Asset20.png'
 import Asset21 from '../../Assets/Projects/Asset21.png'
 import Asset22 from '../../Assets/Projects/Asset22.png'
+import Asset23 from '../../Assets/Projects/Asset23.png'
+import Asset24 from '../../Assets/Projects/Asset24.png'
+import Asset25 from '../../Assets/Projects/Asset25.png'
+import Asset26 from '../../Assets/Projects/Asset26.png'
+
 import ProjectBg from '../../Assets/Projects/ProjectBg.jpg'
 
 
@@ -45,7 +50,14 @@ const projectItems = [
     { image: Asset7, title: "AL HUSSAINI LAVANDA PARK ABHA"    ,path:'/alhussaini_lavanda' },
     { image: Asset16, title: "SUN GLASS HUT PANORAMA MALL RIYADH",  path:'/sun_glass_hut_Panorama' },
     { image: Asset9, title: "BINGHATTI OFFICE-RIYADH"  , path:'/binghatti'},
-    { image: Asset10, title: "JAWHARA JWELLERY PARK AVENUE RIYADH" ,path:'/jawhara' },
+
+    { image: Asset26, title: "JAWHARA JWELLERY PARK AVENUE RIYADH" ,path:'/jawhara' },
+    { image: Asset23, title: "DEICHMANN THE VILLAGE MALL " ,path:'/deichmann' },
+    { image: Asset24, title: "DAISO JAPAN AZIZ MALL" ,path:'/daiso_japan_aziz' },
+    { image: Asset25, title: "CALZEDONIA THE VILLAGE MALL" ,path:'/calzedonia' },
+    { image: Asset26, title: "INTIMISSIMI PARK AVENUE MALL" ,path:'/intimissimi_park_venue' },
+
+
     { image: Asset5, title: "GISSAH PERFUME AL-HASA MALL"   ,path: "/gissah"},
     { image: Asset12, title: "60 SEC AMWAJ MALL AKHOBAR" ,path :'/60_sec' },
     { image: Asset18, title: "KIKO RIYADH GALLERY"   ,path:'/kiko_riyadh_gallery' },
@@ -167,7 +179,7 @@ const projectItems = [
                       </div>
                       <div className="absolute inset-0 flex flex-col justify-end p-12 text-start z-10">
                        <h3
-  style={{ fontWeight: 'bold', letterSpacing: '2px' }}
+  style={{ fontWeight: 'bold', letterSpacing: '4px' }}
   className="text-white w-[70%] text-3xl md:text-5xl m-5 md:m-16 font-serif tracking-wide leading-relaxed project-title against"
 >
   {item.title}

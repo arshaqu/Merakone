@@ -6,8 +6,9 @@ import PaulBg from '../../../Assets/Projects/Paul/PaulBg.jpg'
 import Bg from '../../../Assets/Projects/Paul/Bg.png'
 import LineBg from '../../../Assets/Projects/Paul/Bg.png'
 import { CiLocationOn } from "react-icons/ci"
-import { GiResize, GiShop } from "react-icons/gi"
+import { GiShop } from "react-icons/gi"
 import { IoClose } from "react-icons/io5"
+import { FaCity } from "react-icons/fa";
 
 import BgImg from '../../../Assets/Projects/Reserved/BgImg.JPG'
 import Image1 from '../../../Assets/Projects/Reserved/Img1.JPG'
@@ -105,40 +106,38 @@ function Reserved() {
           {/* Location */}
           <div className="flex flex-col items-center" data-aos="zoom-in">
             <CiLocationOn className="w-12 h-12 md:w-20 md:h-20 mb-2" />
-            <span className="bg-white text-[#2d3680] px-3 py-1 rounded-md text-sm md:text-lg font-medium mb-2 mt-2">
+            <span className="bg-white  tracking-[4px]  text-[#2d3680] px-3 py-1 rounded-md text-sm md:text-lg font-medium mb-2 mt-2">
               Location
             </span>
-            <p className="text-base md:text-xl">RIYADH GALLERY MALL</p>
+            <p className="text-base md:text-xl  tracking-[4px] ">RIYADH GALLERY MALL</p>
           </div>
 
           {/* Divider */}
           <div className="hidden md:flex h-32 w-px bg-white mx-4"></div>
 
-          {/* Sector */}
+
           <div className="flex flex-col items-center" data-aos="zoom-in">
             <GiShop className="w-12 h-12 md:w-20 md:h-20 mb-2" />
-            <span className="bg-white text-[#2d3680] px-3 py-1 rounded-md text-sm md:text-lg font-medium mb-2 mt-2">
+            <span className="bg-white text-[#2d3680] px-3  tracking-[4px]  py-1 rounded-md text-sm md:text-lg font-medium mb-2 mt-2">
               Sector
             </span>
-            <p className="text-base md:text-xl">RESERVED</p>
+            <p className="text-base md:text-xl  tracking-[4px] ">LUXURY RETAIL</p>
           </div>
 
           {/* Divider */}
           <div className="hidden md:flex h-32 w-px bg-white mx-4"></div>
-
-          {/* Completed */}
           <div className="flex flex-col items-center" data-aos="zoom-in">
-            <IoCheckmarkDoneCircleOutline className="w-12 h-12 md:w-20 md:h-20 mb-2" />
-            <span className="bg-white text-[#2d3680] px-3 py-1 rounded-md text-sm md:text-lg font-medium mb-2 mt-2">
-              Completed
+            <FaCity  className="w-12 h-12 md:w-20 md:h-20 mb-2" />
+            <span className="bg-white text-[#2d3680] px-3 py-1 rounded-md text-sm md:text-lg font-medium mb-2 mt-2  tracking-[4px] ">
+              CITY
             </span>
-            <p className="text-base md:text-xl">Completed</p>
+            <p className="text-base md:text-xl  tracking-[4px] ">RIYADH</p>
           </div>
         </div>
 
         {/* Description */}
         <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-          <p className="montserrat text-sm md:text-xl font-extrabold text-white tracking-wide leading-relaxed text-center bg-white mt-6 bg-clip-text text-transparent drop-shadow-lg against">
+          <p className="montserrat tracking-[2px] text-sm md:text-xl font-extrabold text-white tracking-wide leading-relaxed text-center bg-white mt-6 bg-clip-text text-transparent drop-shadow-lg against">
             COMPLETE INTERIOR FIT-OUT INCLUDING CIVIL, INTERIOR DECORATIONS, CIVIL & ELECTRO MECHANICAL WORKS
           </p>
         </div>

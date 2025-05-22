@@ -36,6 +36,10 @@ import ContactUs from './Pages/Contact Us/ContactUs';
 import Projects from './Pages/Projects/Projects';
 import Careers from './Pages/Careers/Careers';
 import WhatsappButton from './Pages/Components/WhatsappButton';
+import Deichmann from './Pages/Projects/ProjectDetails/Deichmann';
+import Calzedonia from './Pages/Projects/ProjectDetails/Calzedonia';
+import Daiso_Japan_Aziz from './Pages/Projects/ProjectDetails/Daiso_Japan_Aziz';
+import Intimissimi_parkvenue from './Pages/Projects/ProjectDetails/Intimissimi_parkvenue';
 
 const Loader = () => {
   return (
@@ -84,12 +88,17 @@ function App() {
         <Route path="/60_sec" element={<Sixty_Sec/>} />
         <Route path="/veromoda" element={<Veromoda/>} />
         <Route path="/giordano" element={<Giordano/>} />
+         <Route path="/deichmann" element={<Deichmann/>} />
+        <Route path="/calzedonia" element={<Calzedonia/>} />
         <Route path="/kiko_lavanda" element={<Kiko_Lavanda/>} />
         <Route path="/kiko_kingdom" element={<Kiko_Kingdom/>} />
         <Route path="/sun_glass_hut" element={<Sun_glass_hut/>} />
         <Route path="/paule_le_gallery" element={<Paul_le_Gallery/>} />
+        <Route path="/daiso_japan_aziz" element={<Daiso_Japan_Aziz/>} />
         <Route path="/kiko_riyadh_gallery" element={<Kiko_Riyadh_Gallery/>} />
         <Route path="/sun_glass_hut_Panorama" element={<SunGlassHut_Panorama/>} />
+        <Route path="/intimissimi_park_venue" element={<Intimissimi_parkvenue/>} />
+
       </Routes>
     </Router>
   );

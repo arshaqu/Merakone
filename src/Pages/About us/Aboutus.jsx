@@ -16,7 +16,7 @@ function Aboutus() {
     // simulate loading delay
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2500); // 2.5 seconds or adjust as needed
+    }, 1500); 
 
     return () => clearTimeout(timer);
   }, []);

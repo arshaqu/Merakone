@@ -8,11 +8,11 @@ import LineBg from '../../../Assets/Projects/Paul/Bg.png'
 import { CiLocationOn } from "react-icons/ci"
 import { GiResize, GiShop } from "react-icons/gi"
 import { IoClose } from "react-icons/io5"
+import { FaCity } from "react-icons/fa";
 
 import Image1 from '../../../Assets/Projects/Intimissimi/Image1.JPG'
 import Image2 from '../../../Assets/Projects/Intimissimi/Image2.JPG'
 import Image3 from '../../../Assets/Projects/Intimissimi/Image3.JPG'
-import Image4 from '../../../Assets/Projects/Intimissimi/Image4.JPG'
 import Image5 from '../../../Assets/Projects/Intimissimi/Image5.JPG'
 import Image6 from '../../../Assets/Projects/Intimissimi/Image6.JPG'
 import Image7 from '../../../Assets/Projects/Intimissimi/Image7.JPG'
@@ -110,39 +110,35 @@ function Intimissimi() {
           </div>
     
           <div className="bg-[#2d3680] py-6 md:py-10 px-4 montserrat" data-aos="fade-up">
-  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-y-8 md:gap-6 text-white text-center">
-    {/* Location */}
-    <div className="flex flex-col items-center" data-aos="zoom-in">
+  <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-stretch justify-between text-white text-center gap-y-8 md:gap-y-0">
+  
+    {/* Location - Left */}
+    <div className="flex flex-col items-center p-6 md:w-1/3" data-aos="zoom-in">
       <CiLocationOn className="w-12 h-12 md:w-20 md:h-20 mb-2" />
-      <span className="bg-white text-[#2d3680] px-3 py-1 rounded-md text-sm md:text-lg font-medium mb-2 mt-2">
-        Location
+      <span className="bg-white tracking-[4px] text-[#2d3680] px-3 py-1 rounded-md text-sm md:text-lg font-medium mb-2 mt-2">
+        LOCATION
       </span>
-      <p className="text-base md:text-xl">PANORAMA MALL RIYADH</p>
+      <p className="text-base md:text-xl tracking-[4px]">PANORAMA MALL</p>
     </div>
-
-    {/* Divider */}
-    <div className="hidden md:flex h-32 w-px bg-white mx-4"></div>
-
-    {/* Sector */}
-    <div className="flex flex-col items-center" data-aos="zoom-in">
+  
+    {/* Sector - Center */}
+    <div className="flex flex-col items-center p-6 md:w-1/3" data-aos="zoom-in">
       <GiShop className="w-12 h-12 md:w-20 md:h-20 mb-2" />
-      <span className="bg-white text-[#2d3680] px-3 py-1 rounded-md text-sm md:text-lg font-medium mb-2 mt-2">
-        Sector
+      <span className="bg-white text-[#2d3680] px-3 tracking-[4px] py-1 rounded-md text-sm md:text-lg font-medium mb-2 mt-2">
+        SECTOR
       </span>
-      <p className="text-base md:text-xl">INTIMISSMI</p>
+      <p className="text-base md:text-xl tracking-[4px]">RETAIL</p>
     </div>
-
-    {/* Divider */}
-    <div className="hidden md:flex h-32 w-px bg-white mx-4"></div>
-
-    {/* Completed */}
-    <div className="flex flex-col items-center" data-aos="zoom-in">
-      <IoCheckmarkDoneCircleOutline className="w-12 h-12 md:w-20 md:h-20 mb-2" />
-      <span className="bg-white text-[#2d3680] px-3 py-1 rounded-md text-sm md:text-lg font-medium mb-2 mt-2">
-        Completed
+  
+    {/* City - Right */}
+    <div className="flex flex-col items-center p-6 md:w-1/3" data-aos="zoom-in">
+      <FaCity className="w-12 h-12 md:w-20 md:h-20 mb-2" />
+      <span className="bg-white text-[#2d3680] px-3 py-1 rounded-md text-sm md:text-lg font-medium mb-2 mt-2 tracking-[4px]">
+        CITY
       </span>
-      <p className="text-base md:text-xl">Completed</p>
+      <p className="text-base md:text-xl tracking-[4px]">RIYADH</p>
     </div>
+  
   </div>
 
   {/* Description */}

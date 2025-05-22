@@ -26,12 +26,12 @@ function Footer() {
               <div  className="md:w-1/3 mt-6 md:mt-0 montserrat">
                 <h3 style={{color:'#2d3680'}} className="text-lg md:text-2xl font-bold text-gray-800 ">CONTACT</h3>
                 <ul style={{color:'#2d3680'}} className="mt-2 space-y-2 md:ml-2 text-gray-600 text-sm md:text-lg">
-                  <li><a href="#" className="hover:text-blue-500">Home</a></li>
-                  <li><a href="#" className="hover:text-blue-500">About Us</a></li>
-                  <li><a href="#" className="hover:text-blue-500">Services</a></li>
-                  <li><a href="#" className="hover:text-blue-500">Projects</a></li>
-                  <li><a href="#" className="hover:text-blue-500">Clients</a></li>
-                  <li><a href="#" className="hover:text-blue-500">Careers</a></li>
+                  <li><a href="/" className="hover:text-blue-500">Home</a></li>
+                  <li><a href="/about_us" className="hover:text-blue-500">About Us</a></li>
+                  <li><a href="/services" className="hover:text-blue-500">Services</a></li>
+                  <li><a href="/projects" className="hover:text-blue-500">Projects</a></li>
+                  <li><a href="/clients" className="hover:text-blue-500">Clients</a></li>
+                  <li><a href="/careers" className="hover:text-blue-500">Careers</a></li>
 
                 </ul>
               </div>

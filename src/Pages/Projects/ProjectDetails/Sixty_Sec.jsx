@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Footer from '../../Components/Footer'
 import Navbar from '../../Components/Navbar'
-import { IoCheckmarkDoneCircleOutline } from "react-icons/io5"
+import { FaCity } from "react-icons/fa";
 import PaulBg from '../../../Assets/Projects/Paul/PaulBg.jpg'
 import Bg from '../../../Assets/Projects/Paul/Bg.png'
 import LineBg from '../../../Assets/Projects/Paul/Bg.png'
@@ -96,40 +96,36 @@ function Sixty_Sec() {
           </div>
     
           <div className="bg-[#2d3680] py-6 md:py-10 px-4 montserrat" data-aos="fade-up">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-y-8 md:gap-6 text-white text-center">
-        {/* Location */}
-        <div className="flex flex-col items-center" data-aos="zoom-in">
-          <CiLocationOn className="w-12 h-12 md:w-20 md:h-20 mb-2" />
-          <span className="bg-white text-[#2d3680] px-3 py-1 rounded-md text-sm md:text-lg font-medium mb-2 mt-2">
-            Location
-          </span>
-          <p className="text-base md:text-lg">AMWAJ MALL DAHRAN</p>
-        </div>
-            
-        {/* Divider */}
-        <div className="hidden md:flex h-32 w-px bg-white mx-4"></div>
-    
-        {/* Sector */}
-        <div className="flex flex-col items-center" data-aos="zoom-in">
-          <GiShop className="w-12 h-12 md:w-20 md:h-20 mb-2" />
-          <span className="bg-white text-[#2d3680] px-3 py-1 rounded-md text-sm md:text-lg font-medium mb-2 mt-2">
-            Sector
-          </span>
-          <p className="text-base md:text-xl">60 SEC</p>
-        </div>
-    
-        {/* Divider */}
-        <div className="hidden md:flex h-32 w-px bg-white mx-4"></div>
-    
-        {/* Completed */}
-        <div className="flex flex-col items-center" data-aos="zoom-in">
-          <IoCheckmarkDoneCircleOutline className="w-12 h-12 md:w-20 md:h-20 mb-2" />
-          <span className="bg-white text-[#2d3680] px-3 py-1 rounded-md text-sm md:text-lg font-medium mb-2 mt-2">
-            Completed
-          </span>
-          <p className="text-base md:text-xl">Completed</p>
-        </div>
-      </div>
+    <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-stretch justify-between text-white text-center gap-y-8 md:gap-y-0">
+
+  {/* Location - Left */}
+  <div className="flex flex-col items-center p-6 md:w-1/3" data-aos="zoom-in">
+    <CiLocationOn className="w-12 h-12 md:w-20 md:h-20 mb-2" />
+    <p className="text-base md:text-xl tracking-[4px]">LOCATION</p>
+    <span className="bg-white tracking-[4px] text-[#2d3680] px-3 py-1 rounded-md text-sm md:text-lg font-medium mb-2 mt-2">
+      AMWAJ MALL
+    </span>
+  </div>
+
+  {/* Sector - Center */}
+  <div className="flex flex-col items-center p-6 md:w-1/3" data-aos="zoom-in">
+    <GiShop className="w-12 h-12 md:w-20 md:h-20 mb-2" />
+    <p className="text-base md:text-xl tracking-[4px]">SECTOR</p>
+    <span className="bg-white text-[#2d3680] px-3 tracking-[4px] py-1 rounded-md text-sm md:text-lg font-medium mb-2 mt-2">
+       RETAIL
+    </span>
+  </div>
+
+  {/* City - Right */}
+  <div className="flex flex-col items-center p-6 md:w-1/3" data-aos="zoom-in">
+    <FaCity className="w-12 h-12 md:w-20 md:h-20 mb-2" />
+    <p className="text-base md:text-xl tracking-[4px]">CITY</p>
+    <span className="bg-white text-[#2d3680] px-3 py-1 rounded-md text-sm md:text-lg font-medium mb-2 mt-2 tracking-[4px]">
+     AL KHOBAR
+    </span>
+  </div>
+
+</div>
     
       {/* Description */}
       <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
